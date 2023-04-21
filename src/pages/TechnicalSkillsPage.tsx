@@ -1,3 +1,7 @@
 export function TechnicalSkillsPage() {
-    return()
+    return(
+        <div>
+            
+        </div>
+    )
 }

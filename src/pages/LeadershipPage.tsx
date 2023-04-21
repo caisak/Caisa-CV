@@ -1,3 +1,7 @@
 export function LeadershipPage() {
-    return()
+    return(
+        <div>
+            
+        </div>
+    )
 }

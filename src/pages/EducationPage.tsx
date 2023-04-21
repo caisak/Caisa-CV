@@ -1,3 +1,7 @@
 export function EducationPage() {
-    return()
+    return(
+        <div>
+            
+        </div>
+    )
 }
