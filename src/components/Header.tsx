@@ -3,6 +3,7 @@ import {
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const HEADER_HEIGHT = rem(60);
 
@@ -85,18 +86,14 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   const { classes, cx } = useStyles();
 
   const items = links.map((link) => (
-    <a
+    <NavLink
       key={link.label}
-      href={link.link}
+      to={link.link}
       className={cx(classes.link, { [classes.linkActive]: active === link.link })}
-      onClick={(event) => {
-        event.preventDefault();
-        setActive(link.link);
-        close();
-      }}
-    >
+      onClick={close}
+      >
       {link.label}
-    </a>
+    </NavLink>
   ));
 
   return (
