@@ -1,29 +1,29 @@
 import { AspectRatio, Card, Container, createStyles, Image, SimpleGrid, Text } from '@mantine/core';
 
-const mockdata = [
+const portfolioData = [
   {
-    title: 'Top 10 places to visit in Norway this summer',
+    title: 'Boba Bliss',
     image:
-      'https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80',
-    date: 'August 18, 2022',
+      '../public/images/bobablissp.png',
+    description: 'Boba Bliss is a web shop built with React, Typescript and Chakra UI. Order your favorite boba and get to a fake confirmation page with a unique id or manage the products through the admin page with CRUD.',
   },
   {
-    title: 'Best forests to visit in North America',
+    title: 'Vegokassen',
     image:
-      'https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80',
-    date: 'August 27, 2022',
+      '../public/images/vegokassenp.png',
+    description: 'Vegokassen - a vegetarian meal kit service. Add products to cart, read reviews or check out how ordering works. Note that the website is in swedish. Built with React and TypeScript.',
   },
   {
-    title: 'Hawaii beaches review: better than you think',
+    title: 'Moon Mission',
     image:
-      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80',
-    date: 'September 9, 2022',
+      '../public/images/moonmissionp.png',
+    description: 'Moon Mission: a fast-paced arcade-style game where players must navigate through a dangerous asteroid field while blasting alien invaders',
   },
   {
-    title: 'Mountains at night: 12 best locations to enjoy the view',
+    title: 'Byt till annat projekt',
     image:
-      'https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80',
-    date: 'September 12, 2022',
+      '../public/images/bobablissp.png',
+    description: '',
   },
 ];
 
@@ -46,16 +46,16 @@ const useStyles = createStyles((theme) => ({
 export function ArticlesCardsGrid() {
   const { classes } = useStyles();
 
-  const cards = mockdata.map((article) => (
+  const cards = portfolioData.map((article) => (
     <Card key={article.title} p="md" radius="md" component="a" href="#" className={classes.card}>
       <AspectRatio ratio={1920 / 1080}>
         <Image src={article.image} />
       </AspectRatio>
-      <Text color="dimmed" size="xs" transform="uppercase" weight={700} mt="md">
-        {article.date}
-      </Text>
       <Text className={classes.title} mt={5}>
         {article.title}
+      </Text>
+      <Text color="dimmed" size="xs" weight={400} mt="md">
+        {article.description}
       </Text>
     </Card>
   ));
