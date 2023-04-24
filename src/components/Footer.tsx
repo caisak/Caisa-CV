@@ -54,15 +54,6 @@ export function FooterCentered({ links }: FooterCenteredProps) {
         <Group className={classes.links}>{items}</Group>
 
         <Group spacing="xs" position="right" noWrap>
-          <ActionIcon size="lg" variant="default" radius="xl">
-            <p>icon</p>
-          </ActionIcon>
-          <ActionIcon size="lg" variant="default" radius="xl">
-            <p>icon</p>
-          </ActionIcon>
-          <ActionIcon size="lg" variant="default" radius="xl">
-            <p>icon</p>
-          </ActionIcon>
         </Group>
       </div>
     </div>

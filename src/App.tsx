@@ -17,8 +17,8 @@ function App() {
   ]
 
   const footerLinks = [
-    { link: '/github', label: 'Github' },
-    { link: '/linkedin', label: 'LinkedIn' },
+    { link: 'https://github.com/caisak', label: 'GitHub' },
+    { link: 'https://www.linkedin.com/in/caisa-kohlin', label: 'LinkedIn' },
     { link: '/email', label: 'Email' },
   ]
 
