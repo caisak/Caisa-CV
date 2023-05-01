@@ -4,7 +4,7 @@ const portfolioData = [
   {
     title: 'Boba Bliss',
     image:
-      '../public/images/bobablissp.png',
+      '../images/bobablissp.png',
     description: 'Boba Bliss is a web shop built with React, Typescript and Chakra UI. Order your favorite boba and get to a fake confirmation page with a unique id or manage the products through the admin page with CRUD.',
     link: 'https://bobabliss.netlify.app/',
     made: 'React, TypeScript, ChakraUI',
@@ -12,7 +12,7 @@ const portfolioData = [
   {
     title: 'Vegokassen',
     image:
-      '../public/images/vegokassenp.png',
+      '../images/vegokassenp.png',
     description: 'Vegokassen - a vegetarian meal kit service. Add products to cart, read reviews or check out how ordering works. Note that the website is in swedish. Built with React and TypeScript.',
     link: 'https://vegokassen.netlify.app/',
     made: 'React, TypeScript, ChakraUI',
@@ -20,7 +20,7 @@ const portfolioData = [
   {
     title: 'Moon Mission',
     image:
-      '../public/images/moonmissionp.png',
+      '../images/moonmissionp.png',
     description: 'Moon Mission: a fast-paced arcade-style game where players must navigate through a dangerous asteroid field while blasting alien invaders.',
     link: 'https://lysmac.github.io/moon-mission/',
     made: 'p5, TypeScript',
@@ -28,7 +28,7 @@ const portfolioData = [
   {
     title: 'Byt till annat projekt',
     image:
-      '../public/images/bobablissp.png',
+      '../images/bobablissp.png',
     description: 'Another description',
     link: 'https://bobabliss.netlify.app/',
     made: 'vanilla HTML and CSS',
