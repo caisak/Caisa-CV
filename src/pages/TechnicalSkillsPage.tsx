@@ -5,6 +5,10 @@ export function TechnicalSkillsPage() {
         <div>
             <h1>Technical Skills</h1>
             <ProgressCard />
+            <h2>Libraries</h2>
+            <h3>React, Svelte</h3>
+            <h2>Other</h2>
+            <h3>Styled components, chakra ui, mantine ui, bootstrap</h3>
         </div>
     )
 }
