@@ -31,7 +31,19 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <MantineProvider>
+    <MantineProvider
+    withGlobalStyles
+    withNormalizeCSS
+    theme={{
+      breakpoints: {
+        xs: '30em',
+        sm: '48em',
+        md: '64em',
+        lg: '74em',
+        xl: '90em',
+      },
+    }}
+    >
       <RouterProvider router={router} />
     </MantineProvider>
   </React.StrictMode>,
