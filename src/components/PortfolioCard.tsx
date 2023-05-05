@@ -29,7 +29,7 @@ const portfolioData = [
     title: 'Scratchpad',
     image:
       '../images/scratchpadp.png',
-    description: 'Another description',
+    description: 'Scratchpad is a whimsical, colorful social media platform. Like Twitter - but for cats! Built with React, TypeScript, Mantine UI, Express and Mongoose.',
     link: '/',
     website: 'Coming Soon',
   },
