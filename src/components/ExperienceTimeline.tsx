@@ -11,7 +11,7 @@ export function ExperienceTimeline() {
 
       <Timeline.Item title="Store Support">
         <Text size="sm">Consultant</Text>
-        <Text size="xs" color="dimmed" mt={4}>2016-2018</Text>
+        <Text size="xs" color="dimmed" mt={4}>2016-2019</Text>
       </Timeline.Item>
 
       <Timeline.Item title="Bonum Matmarknad">
