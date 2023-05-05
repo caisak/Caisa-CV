@@ -1,4 +1,4 @@
-import { AspectRatio, Button, Card, Container, createStyles, Divider, Image, SimpleGrid, Text } from '@mantine/core';
+import { AspectRatio, Button, Card, Center, Container, createStyles, Divider, Image, SimpleGrid, Text } from '@mantine/core';
 
 const portfolioData = [
   {
@@ -77,12 +77,14 @@ export function ArticlesCardsGrid() {
         {article.description}
       </Text>
       <Divider my="sm" />
+      <Center>
       <Button className={classes.button} color="gray"  >
       View on GitHub
     </Button>
     <Button className={classes.button} color="green" >
       {article.website}
     </Button>
+    </Center>
     </Card>
   ));
 
