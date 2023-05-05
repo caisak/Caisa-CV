@@ -1,4 +1,4 @@
-import { AspectRatio, Button, Card, Container, createStyles, Image, SimpleGrid, Text } from '@mantine/core';
+import { AspectRatio, Button, Card, Container, createStyles, Divider, Image, SimpleGrid, Text } from '@mantine/core';
 
 const portfolioData = [
   {
@@ -38,6 +38,7 @@ const portfolioData = [
 const useStyles = createStyles((theme) => ({
   card: {
     transition: 'transform 150ms ease, box-shadow 150ms ease',
+    
 
     '&:hover': {
       transform: 'scale(1.01)',
@@ -54,7 +55,8 @@ const useStyles = createStyles((theme) => ({
     margin: '1rem',
     radius: "sm",
     size: "sm"
-  }
+  },
+
 
 }));
 
@@ -67,13 +69,14 @@ export function ArticlesCardsGrid() {
       <AspectRatio ratio={1920 / 1080}>
         <Image src={article.image} />
       </AspectRatio>
-      <Text className={classes.title} mt={5}>
+      <Text size="xl" className={classes.title} mt={5}>
         {article.title}
       </Text>
       </a>
-      <Text size="sm" weight={400} mt="md">
+      <Text size="md" weight={400} mt="md">
         {article.description}
       </Text>
+      <Divider my="sm" />
       <Button className={classes.button} color="gray"  >
       View on GitHub
     </Button>
