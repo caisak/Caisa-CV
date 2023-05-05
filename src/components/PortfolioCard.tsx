@@ -7,7 +7,7 @@ const portfolioData = [
       '../images/bobablissp.png',
     description: 'Boba Bliss is a web shop built with React, Typescript and Chakra UI. Order your favorite boba and get to a fake confirmation page with a unique id or manage the products through the admin page with CRUD.',
     link: 'https://bobabliss.netlify.app/',
-    made: 'React, TypeScript, ChakraUI',
+    website: 'Go to Boba Bliss',
   },
   {
     title: 'Vegokassen',
@@ -15,7 +15,7 @@ const portfolioData = [
       '../images/vegokassenp.png',
     description: 'Vegokassen - a vegetarian meal kit service. Add products to cart, read reviews or check out how ordering works. Note that the website is in swedish. Built with React and TypeScript.',
     link: 'https://vegokassen.netlify.app/',
-    made: 'React, TypeScript, ChakraUI',
+    website: 'Go to Vegokassen',
   },
   {
     title: 'Moon Mission',
@@ -23,15 +23,15 @@ const portfolioData = [
       '../images/moonmissionp.png',
     description: 'Moon Mission: a fast-paced arcade-style game where players must navigate through a dangerous asteroid field while blasting alien invaders.',
     link: 'https://lysmac.github.io/moon-mission/',
-    made: 'p5, TypeScript',
+    website: 'Go to Moon Mission',
   },
   {
-    title: 'Byt till annat projekt',
+    title: 'Scratchpad',
     image:
-      '../images/bobablissp.png',
+      '../images/scratchpadp.png',
     description: 'Another description',
-    link: 'https://bobabliss.netlify.app/',
-    made: 'vanilla HTML and CSS',
+    link: '/',
+    website: 'Coming Soon',
   },
 ];
 
@@ -49,6 +49,13 @@ const useStyles = createStyles((theme) => ({
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
     fontWeight: 600,
   },
+
+  button: {
+    margin: '1rem',
+    radius: "sm",
+    size: "sm"
+  }
+
 }));
 
 export function ArticlesCardsGrid() {
@@ -64,14 +71,14 @@ export function ArticlesCardsGrid() {
         {article.title}
       </Text>
       </a>
-      <Text color="dimmed" size="xs" weight={400} mt="md">
+      <Text size="sm" weight={400} mt="md">
         {article.description}
       </Text>
-      <Text size="xs" weight={700} mt="md">
-        {article.made}
-      </Text>
-      <Button color="gray" size="xs">
+      <Button className={classes.button} color="gray"  >
       View on GitHub
+    </Button>
+    <Button className={classes.button} color="green" >
+      {article.website}
     </Button>
     </Card>
   ));
