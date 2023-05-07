@@ -5,19 +5,21 @@ const portfolioData = [
     title: 'Boba Bliss',
     image:
       '../images/bobablissp.png',
-    description: 'Boba Bliss is a web shop built with React, Typescript and Chakra UI. Order your favorite boba and get to a fake confirmation page with a unique id or manage the products through the admin page with CRUD.',
+    description: 'Boba Bliss is a front end web shop. Order your favorite boba and get to a fake confirmation page with a unique id or manage the products through the admin page with CRUD.',
     link: 'https://bobabliss.netlify.app/',
     github: 'https://github.com/caisak/Boba-Bliss',
     website: 'Go to Boba Bliss',
+    build: 'React, typescript, chakra ui',
   },
   {
     title: 'Vegokassen',
     image:
       '../images/vegokassenp.png',
-    description: 'Vegokassen - a vegetarian meal kit service. Add products to cart, read reviews or check out how ordering works. Note that the website is in swedish. Built with React and TypeScript.',
+    description: 'Vegokassen - a vegetarian meal kit service. Add products to cart, read reviews or check out how ordering works. Note that the website is in swedish.',
     link: 'https://vegokassen.netlify.app/',
     github: 'https://github.com/caisak/Vegokassen',
     website: 'Go to Vegokassen',
+    build: 'react, typescript, styled components',
   },
   {
     title: 'Moon Mission',
@@ -27,15 +29,17 @@ const portfolioData = [
     link: 'https://lysmac.github.io/moon-mission/',
     github: 'https://github.com/caisak/moon-mission',
     website: 'Go to Moon Mission',
+    build: 'typescript, p5',
   },
   {
     title: 'Scratchpad',
     image:
       '../images/scratchpadp.png',
-    description: 'Scratchpad is a whimsical, colorful social media platform. Like Twitter - but for cats! Built with React, TypeScript, Mantine UI, Express and Mongoose.',
+    description: 'Scratchpad is a full stack social media application that is whimsical and colorful. Register an account, log in and start posting. Like Twitter - but for cats!',
     link: '/',
     github: '/',
     website: 'Coming Soon',
+    build: 'react, typescript, mantine ui, express, mongoose',
   },
 ];
 
@@ -79,6 +83,7 @@ export function ArticlesCardsGrid() {
         {article.description}
       </Text>
       <Divider my="sm" />
+      <Text tt="uppercase" fw={700} fz="xs">{article.build}</Text>
       <Center>
       <Button className={classes.button} color="gray"  
       component="a"
