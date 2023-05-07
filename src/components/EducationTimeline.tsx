@@ -2,7 +2,7 @@ import { Text, Timeline } from '@mantine/core';
 
 export function EducationTimeline() {
   return (
-    <Timeline active={5} bulletSize={24} lineWidth={4} color="teal">
+    <Timeline active={4} bulletSize={24} lineWidth={4} color="teal">
       <Timeline.Item title="Strömstad Gymnasium">
         <Text size="sm">Upper secondary school</Text>
         <Text size="xs" color="dimmed" mt={4}>2010-2013</Text>
@@ -30,7 +30,7 @@ export function EducationTimeline() {
 
       <Timeline.Item title="Medieinstitutet - Graduation">
         <Text size="sm">Front End Developer</Text>
-        <Text size="xs" color="dimmed" mt={4}>2023</Text>
+        <Text size="xs" color="dimmed" mt={4}>June 2024</Text>
       </Timeline.Item>
       
     </Timeline>

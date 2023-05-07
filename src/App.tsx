@@ -9,11 +9,7 @@ function App() {
 
   const headerLinks = [
     { link: '/', label: 'About Me' },
-    { link: '/education', label: 'Education' },
-    { link: '/technicalskills', label: 'Technical Skills' },
     { link: '/portfolio', label: 'Portfolio' },
-    { link: '/experience', label: 'Experience' },
-    { link: '/leadership', label: 'Leadership' },
   ]
 
   const footerLinks = [

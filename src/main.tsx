@@ -5,23 +5,15 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import App from './App'
 import './main.css'
 import { AboutMePage } from './pages/AboutMePage'
-import { EducationPage } from './pages/EducationPage'
-import { ExperiencePage } from './pages/ExperiencePage'
-import { LeadershipPage } from './pages/LeadershipPage'
 import { NotFound } from './pages/NotFound'
 import { PortfolioPage } from './pages/PortfolioPage'
-import { TechnicalSkillsPage } from './pages/TechnicalSkillsPage'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       {/* Outlet start? */}
       <Route index element={<AboutMePage />}></Route>
-      <Route path="education" element={<EducationPage />} />
-      <Route path="technicalskills" element={<TechnicalSkillsPage />} />
       <Route path="portfolio" element={<PortfolioPage />} />
-      <Route path="experience" element={<ExperiencePage />} />
-      <Route path="leadership" element={<LeadershipPage />} />
       <Route path="*" element={<NotFound />} />
     </Route>
 
