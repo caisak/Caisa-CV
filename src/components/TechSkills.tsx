@@ -13,19 +13,19 @@ export function ProgressCard() {
       <Text fz="lg" fw={500}>
         HTML
       </Text>
-      <Progress value={74.31} mt="md" size="lg" radius="xl" />
+      <Progress value={74.31} mt="md" size="lg" radius="sm" color="indigo" />
       <Text fz="lg" fw={500} mt="md">
         CSS
       </Text>
-      <Progress value={74.51} mt="md" size="lg" radius="xl" />
+      <Progress value={74.51} mt="md" size="lg" radius="sm" color="indigo" />
       <Text fz="lg" fw={500} mt="md">
         JavaScript
       </Text>
-      <Progress value={46.31} mt="md" size="lg" radius="xl" />
+      <Progress value={46.31} mt="md" size="lg" radius="sm" color="indigo" />
       <Text fz="lg" fw={500} mt="md">
         TypeScript
       </Text>
-      <Progress value={64.31} mt="md" size="lg" radius="xl" />
+      <Progress value={64.31} mt="md" size="lg" radius="sm" color="indigo" />
     </Card>
   );
 }

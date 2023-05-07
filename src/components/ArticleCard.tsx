@@ -31,12 +31,11 @@ const useStyles = createStyles((theme) => ({
 
 interface ArticleCardImageProps {
   image: string;
-  title: string;
   link: string;
   website: string;
 }
 
-export function ArticleCardImage({ image, title, link, website }: ArticleCardImageProps) {
+export function ArticleCardImage({ image, link, website }: ArticleCardImageProps) {
   const { classes } = useStyles();
 
   return (
@@ -48,12 +47,9 @@ export function ArticleCardImage({ image, title, link, website }: ArticleCardIma
       className={classes.card}
     >
       <div>
-        <Title order={3} className={classes.title}>
-          {title}
-        </Title>
       </div>
       <Button variant="filled" 
-      color="green"
+      color="dark"
       component="a"
         href={link}
         target="_blank"
