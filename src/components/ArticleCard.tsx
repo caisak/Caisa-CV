@@ -3,7 +3,7 @@ import { Button, createStyles, Paper, rem, Title } from '@mantine/core';
 const useStyles = createStyles((theme) => ({
   card: {
     height: rem(200),
-    width: '20rem',
+    width: '30rem',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
@@ -52,8 +52,8 @@ export function ArticleCardImage({ image, title, link, website }: ArticleCardIma
           {title}
         </Title>
       </div>
-      <Button variant="white" 
-      color="dark"
+      <Button variant="filled" 
+      color="green"
       component="a"
         href={link}
         target="_blank"

@@ -1,10 +1,12 @@
 import { Flex } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
 import { ArticleCardImage } from "../components/ArticleCard";
 import { EducationTimeline } from "../components/EducationTimeline";
 import { ExperienceTimeline } from "../components/ExperienceTimeline";
 import { ProgressCard } from "../components/TechSkills";
 
 export function AboutMePage() {
+    const isMobile = useMediaQuery('(max-width: 768px)');
   return (
     <div>
       <h1>About Me</h1>
@@ -17,7 +19,7 @@ export function AboutMePage() {
         <h2>Selected Projects</h2>
         <h2 style={{ textAlign: "right" }}>Go to Portfolio</h2>
       </div>
-      <Flex justify="center" gap="xl">
+      <Flex direction={isMobile ? 'column' : 'row'} gap="xl" align="center">
         <ArticleCardImage
           image="/images/bobablissp.png"
           title="Boba Bliss"
