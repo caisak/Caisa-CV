@@ -1,32 +1,18 @@
-import { Box, Center, Group, SegmentedControl, useMantineColorScheme } from '@mantine/core';
+import { Text, useMantineColorScheme } from '@mantine/core';
+import { BiSun } from 'react-icons/bi';
 
 export function SegmentedToggle() {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
+  const nextColorScheme = colorScheme === 'dark' ? 'light' : 'dark';
+
+  const color = colorScheme === 'dark' ? 'yellow' : 'blue';
 
   return (
-    <Group position="center" my="xl">
-      <SegmentedControl
-        value={colorScheme}
-        onChange={(value: 'light' | 'dark') => toggleColorScheme(value)}
-        data={[
-          {
-            value: 'light',
-            label: (
-              <Center>
-                <Box ml={10}>Light</Box>
-              </Center>
-            ),
-          },
-          {
-            value: 'dark',
-            label: (
-              <Center>
-                <Box ml={10}>Dark</Box>
-              </Center>
-            ),
-          },
-        ]}
-      />
-    </Group>
+    <Text
+      onClick={() => toggleColorScheme(nextColorScheme)}
+      style={{ cursor: 'pointer', color: color }}
+    >
+      <BiSun style={{ verticalAlign: 'middle' }}/>
+    </Text>
   );
 }

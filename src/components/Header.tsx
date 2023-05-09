@@ -119,10 +119,13 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   return (
     <Header height={HEADER_HEIGHT} mb={120} className={classes.root}>
       <Container className={classes.header}>
-        <Title>Caisa Köhlin</Title>
-        <SegmentedToggle />
+      <Title>
+  <span style={{ display: 'flex', alignItems: 'center' }}>
+  <SegmentedToggle />Caisa Köhlin
+  </span>
+</Title>
         <Group spacing={5} className={classes.links}>
-          {items}
+          {items}      
         </Group>
 
         <Burger
