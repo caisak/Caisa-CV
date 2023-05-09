@@ -5,7 +5,7 @@ export function SegmentedToggle() {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const nextColorScheme = colorScheme === 'dark' ? 'light' : 'dark';
 
-  const color = colorScheme === 'dark' ? 'yellow' : 'blue';
+  const color = colorScheme === 'dark' ? 'yellow' : 'black';
 
   return (
     <Text
