@@ -7,7 +7,7 @@ import {
   Paper,
   rem,
   Title,
-  Transition
+  Transition,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { NavLink, useLocation } from "react-router-dom";
@@ -119,13 +119,10 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   return (
     <Header height={HEADER_HEIGHT} mb={120} className={classes.root}>
       <Container className={classes.header}>
-      <Title>
-  <span style={{ display: 'flex', alignItems: 'center' }}>
-  <SegmentedToggle />Caisa Köhlin
-  </span>
-</Title>
+        <Title>Caisa Köhlin</Title>
         <Group spacing={5} className={classes.links}>
-          {items}      
+          <SegmentedToggle />
+          {items}
         </Group>
 
         <Burger
