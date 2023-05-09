@@ -1,18 +1,23 @@
-import { Text, useMantineColorScheme } from '@mantine/core';
+import { ActionIcon, Group, useMantineColorScheme } from '@mantine/core';
 import { BiSun } from 'react-icons/bi';
+import { BsMoonStars } from 'react-icons/bs';
 
-export function SegmentedToggle() {
+export function ActionToggle() {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
-  const nextColorScheme = colorScheme === 'dark' ? 'light' : 'dark';
-
-  const color = colorScheme === 'dark' ? 'yellow' : 'black';
 
   return (
-    <Text
-      onClick={() => toggleColorScheme(nextColorScheme)}
-      style={{ cursor: 'pointer', color: color }}
-    >
-      <BiSun style={{ verticalAlign: 'middle' }}/>
-    </Text>
+    <Group position="center" my="xl">
+      <ActionIcon
+        onClick={() => toggleColorScheme()}
+        size="lg"
+        sx={(theme) => ({
+          backgroundColor:
+            theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
+          color: theme.colorScheme === 'dark' ? theme.colors.yellow[4] : theme.colors.blue[6],
+        })}
+      >
+        {colorScheme === 'dark' ? <BiSun /> : <BsMoonStars />}
+      </ActionIcon>
+    </Group>
   );
 }

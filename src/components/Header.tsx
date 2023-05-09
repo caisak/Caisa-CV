@@ -7,11 +7,11 @@ import {
   Paper,
   rem,
   Title,
-  Transition,
+  Transition
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { NavLink, useLocation } from "react-router-dom";
-import { SegmentedToggle } from "./ColorModeToggle";
+import { ActionToggle } from "./ColorModeToggle";
 
 const HEADER_HEIGHT = rem(60);
 
@@ -121,8 +121,8 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
       <Container className={classes.header}>
         <Title>Caisa Köhlin</Title>
         <Group spacing={5} className={classes.links}>
-          <SegmentedToggle />
           {items}
+          <ActionToggle />
         </Group>
 
         <Burger
