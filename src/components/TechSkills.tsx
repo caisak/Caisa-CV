@@ -1,4 +1,4 @@
-import { Card, Progress, Text } from '@mantine/core';
+import { Card, Col, Grid, Progress, Text, useMantineTheme } from '@mantine/core';
 import { AiFillGithub } from 'react-icons/ai';
 import { CgFigma } from 'react-icons/cg';
 import { FaBootstrap, FaGit, FaReact } from 'react-icons/fa';
@@ -40,30 +40,38 @@ export function ProgressCard() {
 }
 
 export function TechKnowledge() {
+  const theme = useMantineTheme();
+
+  const icons = [
+    { Icon: AiFillGithub, title: "Github" },
+    { Icon: FaGit, title: "Git" },
+    { Icon: SiSvelte, title: "Svelte" },
+    { Icon: SiMongodb, title: "MongoDB" },
+    { Icon: SiChakraui, title: "Chakra UI" },
+    { Icon: TbBrandMantine, title: "Mantine" },
+    { Icon: FaBootstrap, title: "Bootstrap" },
+    { Icon: CgFigma, title: "Figma" },
+    { Icon: SiSocketdotio, title: "Socket.io" },
+    { Icon: SiStyledcomponents, title: "Styled Components" },
+    { Icon: SiAdobepremierepro, title: "Adobe Premiere Pro" },
+  ];
   return(
-    <Card
-    padding="xl"
+<Card
+      padding="xl"
       sx={(theme) => ({
         backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
       })}
     >
-      <SiChakraui />
-      <TbBrandMantine />
-      <AiFillGithub />
-      <FaBootstrap />
-      <CgFigma />
-      <FaGit />
-      <SiMongodb />
-      <SiSocketdotio />
-      <SiAdobepremierepro />
-      <SiSvelte />
-      <SiStyledcomponents />
-      
-      
-     
-      
-   
-
+      <Grid gutter="md">
+        {icons.map(({ Icon, title }) => (
+          <Col span={6} sm={6} xs={6} key={title}>
+            <div style={{ textAlign: 'center' }}>
+              <Icon size={40} />
+              <Text align="center">{title}</Text>
+            </div>
+          </Col>
+        ))}
+      </Grid>
     </Card>
   )
 }

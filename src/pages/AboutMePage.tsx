@@ -1,10 +1,9 @@
 import {
   Button,
-  Container,
-  createStyles,
+  Col,
+  Container, createStyles,
   Divider,
-  Flex,
-  useMantineTheme
+  Flex, Grid, useMantineTheme
 } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { NavLink } from "react-router-dom";
@@ -42,17 +41,30 @@ export function AboutMePage() {
   return (
     <div>
       <HeroImageRight />
+      <Divider color={buttonColor} />
       <Container size="xl">
-      <h2>Technical Skills</h2>
       <Flex
         justify="space-between"
         align="center"
         style={{ marginBottom: "1rem", marginTop: "1rem" }}
       >
-      
-      <ProgressCard />
-      <TechKnowledge />
-      </Flex>
+        <h2>Technical Skills</h2>
+        <NavLink to="https://github.com/caisak" className={classes.link}>
+          <Button variant="outline" color={buttonColor} radius="lg">
+            Go to GitHub
+          </Button>
+        </NavLink>
+        </Flex>
+      <Container size="lg" p="xl">
+      <Grid gutter="lg">
+        <Col span={12} md={6}>
+          <ProgressCard />
+        </Col>
+        <Col span={12} md={6}>
+          <TechKnowledge />
+        </Col>
+      </Grid>
+    </Container>
       <Divider my="lg" color={buttonColor} />
       <Flex
         justify="space-between"
