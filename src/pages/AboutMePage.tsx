@@ -1,4 +1,10 @@
-import { Button, createStyles, Divider, Flex, useMantineTheme } from "@mantine/core";
+import {
+  Button,
+  createStyles,
+  Divider,
+  Flex,
+  useMantineTheme
+} from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { NavLink } from "react-router-dom";
 import { ArticleCardImage } from "../components/ArticleCard";
@@ -31,7 +37,7 @@ export function AboutMePage() {
   const { classes, cx } = useStyles();
   const theme = useMantineTheme();
   const buttonColor = theme.colorScheme === "dark" ? "gray.1" : "dark";
-  
+
   return (
     <div>
       <HeroImageRight />
@@ -51,7 +57,7 @@ export function AboutMePage() {
           </Button>
         </NavLink>
       </Flex>
-      <Flex direction={isMobile ? "column" : "row"} gap="xl" align="center">
+      <Flex direction={isMobile ? "column" : "row"} gap="xl" align="center" mb="xl">
         <ArticleCardImage
           link="https://bobabliss.netlify.app/"
           image="/images/bobablissp.png"
@@ -59,18 +65,33 @@ export function AboutMePage() {
         />
 
         <ArticleCardImage
-        link="https://vegokassen.netlify.app/"
+          link="https://vegokassen.netlify.app/"
           image="/images/vegokassenp.png"
           website="Go to Vegokassen"
         />
 
         <ArticleCardImage
-        link="https://lysmac.github.io/moon-mission/"
+          link="https://lysmac.github.io/moon-mission/"
           image="/images/moonmissionp.png"
           website="Go to Moon Mission"
         />
       </Flex>
-      <h2 style={{ marginBottom: "1rem", marginTop: "1rem" }}>Education</h2>
+      <Divider my="lg" color={buttonColor} />
+      <Flex
+        justify="space-between"
+        align="center"
+        style={{ marginBottom: "1rem", marginTop: "1rem" }}
+      >
+        <h2>Education</h2>
+        <NavLink
+          to="https://medieinstitutet.se/utbildningar/front-end-developer/"
+          className={classes.link}
+        >
+          <Button variant="outline" color={buttonColor} radius="lg">
+            Go to Medieinstitutet
+          </Button>
+        </NavLink>
+      </Flex>
       <EducationTimeline />
       <h2
         style={{ textAlign: "right", marginBottom: "1rem", marginTop: "1rem" }}
@@ -78,6 +99,8 @@ export function AboutMePage() {
         Experience
       </h2>
       <ExperienceTimeline />
+      <Divider my="lg" color={buttonColor} />
+
     </div>
   );
 }

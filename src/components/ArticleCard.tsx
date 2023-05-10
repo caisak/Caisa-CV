@@ -42,7 +42,7 @@ export function ArticleCardImage({ image, link, website }: ArticleCardImageProps
     <Paper
       shadow="md"
       p="xl"
-      radius="md"
+      radius="none"
       sx={{ backgroundImage: `url(${image})` }}
       className={classes.card}
     >
@@ -50,6 +50,7 @@ export function ArticleCardImage({ image, link, website }: ArticleCardImageProps
       </div>
       <Button variant="filled" 
       color="dark"
+      radius="lg"
       component="a"
         href={link}
         target="_blank"
