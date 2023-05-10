@@ -108,7 +108,7 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
 
   return (
     <Header height={HEADER_HEIGHT} mb={120} className={classes.root}>
-      <Container size="xl" className={classes.header}>
+      <Container size="lg" className={classes.header}>
         <Title order={2}>
           <span style={{ display: "flex", alignItems: "center" }}>
             <span>

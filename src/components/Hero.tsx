@@ -1,10 +1,11 @@
 import {
-    Button,
-    Container,
-    createStyles,
-    rem,
-    Text,
-    Title
+  Button,
+  Center,
+  Container,
+  createStyles,
+  rem,
+  Text,
+  Title
 } from "@mantine/core";
 
 const useStyles = createStyles((theme) => ({
@@ -13,19 +14,24 @@ const useStyles = createStyles((theme) => ({
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundImage: "url(/images/lakesup.jpg)",
-    filter: "grayscale(100%)",  
+    filter: "grayscale(100%)",
     paddingTop: `calc(${theme.spacing.xl} * 3)`,
     paddingBottom: `calc(${theme.spacing.xl} * 3)`,
     marginTop: "-8rem",
-    height: '100vh',
+    height: "100vh",
+    display: "flex",
+    alignItems: "center",
   },
 
   inner: {
     display: "flex",
-    justifyContent: "space-between",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
 
     [theme.fn.smallerThan("md")]: {
       flexDirection: "column",
+ 
     },
   },
 
@@ -42,6 +48,7 @@ const useStyles = createStyles((theme) => ({
 
     [theme.fn.smallerThan("md")]: {
       marginRight: 0,
+      
     },
   },
 
@@ -89,24 +96,25 @@ export function HeroImageRight() {
       <Container size="lg">
         <div className={classes.inner}>
           <div className={classes.content}>
-            <Title className={classes.title}>
-              Making waves
-            </Title>
+            <Center>
+            <Title className={classes.title}>Making waves</Title>
+            </Center>
 
             <Text className={classes.description} fw={700} mt={30}>
               Doing stuff with people and getting paid
             </Text>
-
-            <Button
-              variant="outline"
-              color="gray.1"
-              radius="lg"
-              size="lg"
-              className={classes.control}
-              mt={40}
-            >
-              Hire me
-            </Button>
+            <Center>
+              <Button
+                variant="outline"
+                color="gray.1"
+                radius="lg"
+                size="lg"
+                className={classes.control}
+                mt={40}
+              >
+                Hire me
+              </Button>
+            </Center>
           </div>
         </div>
       </Container>
