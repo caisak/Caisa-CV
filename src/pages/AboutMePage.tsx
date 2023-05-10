@@ -38,10 +38,7 @@ export function AboutMePage() {
     <div>
       <h1>About Me</h1>
       <ProgressCard />
-      <h2>Libraries</h2>
-      <h3>React, Svelte</h3>
-      <h2>Other</h2>
-      <h3>Styled components, chakra ui, mantine ui, bootstrap</h3>
+      <h3>Svelte, Styled components, chakra ui, mantine ui, bootstrap</h3>
       <Flex
         justify="space-between"
         align="center"

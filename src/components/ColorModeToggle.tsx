@@ -10,11 +10,10 @@ export function ActionToggle() {
       <ActionIcon
         onClick={() => toggleColorScheme()}
         size="lg"
-        mr="1rem"
+        mr="0.5rem"
         sx={(theme) => ({
-          backgroundColor:
-            theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
-          color: theme.colorScheme === 'dark' ? theme.colors.yellow[4] : theme.colors.blue[6],
+
+          color: theme.colorScheme === 'dark' ? theme.colors.white : theme.colors.dark[9],
         })}
       >
         {colorScheme === 'dark' ? <BiSun /> : <BsMoonStars />}

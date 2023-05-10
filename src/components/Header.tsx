@@ -1,5 +1,6 @@
 import {
   Burger,
+  Button,
   Container,
   createStyles,
   Group,
@@ -7,7 +8,8 @@ import {
   Paper,
   rem,
   Title,
-  Transition
+  Transition,
+  useMantineTheme
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { NavLink, useLocation } from "react-router-dom";
@@ -60,7 +62,7 @@ const useStyles = createStyles((theme) => ({
     display: "block",
     lineHeight: 1,
     padding: `${rem(8)} ${rem(12)}`,
-    borderRadius: theme.radius.sm,
+    borderRadius: theme.radius.lg,
     textDecoration: "none",
     color:
       theme.colorScheme === "dark"
@@ -69,27 +71,9 @@ const useStyles = createStyles((theme) => ({
     fontSize: theme.fontSizes.sm,
     fontWeight: 500,
 
-    "&:hover": {
-      backgroundColor:
-        theme.colorScheme === "dark"
-          ? theme.colors.dark[6]
-          : theme.colors.gray[0],
-    },
-
     [theme.fn.smallerThan("sm")]: {
       borderRadius: 0,
       padding: theme.spacing.md,
-    },
-  },
-
-  linkActive: {
-    "&, &:hover": {
-      backgroundColor: theme.fn.variant({
-        variant: "light",
-        color: theme.primaryColor,
-      }).background,
-      color: theme.fn.variant({ variant: "light", color: theme.primaryColor })
-        .color,
     },
   },
 }));
@@ -102,29 +86,33 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   const [opened, { toggle, close }] = useDisclosure(false);
   const { classes, cx } = useStyles();
   const location = useLocation();
+  const theme = useMantineTheme();
+  const buttonColor = theme.colorScheme === "dark" ? "gray.1" : "dark";
 
   const items = links.map((link) => (
     <NavLink
       key={link.label}
       to={link.link}
-      className={cx(classes.link, {
-        [classes.linkActive]: location.pathname === link.link,
-      })}
+      className={cx(classes.link)}
       onClick={close}
     >
-      {link.label}
+      <Button variant="outline" color={buttonColor} radius="lg">
+        {link.label}
+      </Button>
     </NavLink>
   ));
 
   return (
     <Header height={HEADER_HEIGHT} mb={120} className={classes.root}>
       <Container className={classes.header}>
-      <Title>
-  <span style={{ display: 'flex', alignItems: 'center' }}>
-    <span><ActionToggle /></span>
-    <span>Caisa Köhlin</span>
-  </span>
-</Title>
+        <Title order={2}>
+          <span style={{ display: "flex", alignItems: "center" }}>
+            <span>
+              <ActionToggle />
+            </span>
+            <span>Caisa Köhlin</span>
+          </span>
+        </Title>
         <Group spacing={5} className={classes.links}>
           {items}
         </Group>
