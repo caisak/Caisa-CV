@@ -12,7 +12,7 @@ import { ArticleCardImage } from "../components/ArticleCard";
 import { EducationTimeline } from "../components/EducationTimeline";
 import { ExperienceTimeline } from "../components/ExperienceTimeline";
 import { HeroImageRight } from "../components/Hero";
-import { ProgressCard } from "../components/TechSkills";
+import { ProgressCard, TechKnowledge } from "../components/TechSkills";
 
 const useStyles = createStyles((theme) => ({
   link: {
@@ -44,8 +44,15 @@ export function AboutMePage() {
       <HeroImageRight />
       <Container size="xl">
       <h2>Technical Skills</h2>
+      <Flex
+        justify="space-between"
+        align="center"
+        style={{ marginBottom: "1rem", marginTop: "1rem" }}
+      >
+      
       <ProgressCard />
-      <h3>Svelte, Styled components, chakra ui, mantine ui, bootstrap</h3>
+      <TechKnowledge />
+      </Flex>
       <Divider my="lg" color={buttonColor} />
       <Flex
         justify="space-between"
