@@ -1,4 +1,4 @@
-import { Container } from '@mantine/core'
+import { Box } from '@mantine/core'
 import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import { FooterCentered } from './components/Footer'
@@ -21,9 +21,9 @@ function App() {
   return (
     <div>
       <HeaderResponsive links={headerLinks} />
-      <Container>
+      <Box w="100%">
         <Outlet />
-        </Container>
+        </Box>
       <FooterCentered links={footerLinks} />
     </div>
   )
