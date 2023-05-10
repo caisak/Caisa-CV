@@ -1,4 +1,5 @@
 import { ArticlesCardsGrid } from "../components/PortfolioCard";
+import { TimelineTab } from "../components/Tabs";
 
 export function PortfolioPage() {
     return(

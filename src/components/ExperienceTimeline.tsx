@@ -2,7 +2,7 @@ import { Text, Timeline } from "@mantine/core";
 
 export function ExperienceTimeline() {
     return(
-        <Timeline active={4} bulletSize={24} lineWidth={4} color="indigo"  align="right">
+        <Timeline active={4} bulletSize={24} lineWidth={4} color="indigo" align="right" >
 
       <Timeline.Item title="Coop Konsum">
         <Text size="sm">Cashier</Text>

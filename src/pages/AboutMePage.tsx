@@ -8,9 +8,8 @@ import {
 import { useMediaQuery } from "@mantine/hooks";
 import { NavLink } from "react-router-dom";
 import { ArticleCardImage } from "../components/ArticleCard";
-import { EducationTimeline } from "../components/EducationTimeline";
-import { ExperienceTimeline } from "../components/ExperienceTimeline";
 import { HeroImageRight } from "../components/Hero";
+import { TimelineTab } from "../components/Tabs";
 import { ProgressCard, TechKnowledge } from "../components/TechSkills";
 
 const useStyles = createStyles((theme) => ({
@@ -97,29 +96,7 @@ export function AboutMePage() {
           website="Go to Moon Mission"
         />
       </Flex>
-      <Divider my="lg" color={buttonColor} />
-      <Flex
-        justify="space-between"
-        align="center"
-        style={{ marginBottom: "1rem", marginTop: "1rem" }}
-      >
-        <h2>Education</h2>
-        <NavLink
-          to="https://medieinstitutet.se/utbildningar/front-end-developer/"
-          className={classes.link}
-        >
-          <Button variant="outline" color={buttonColor} radius="lg">
-            Go to Medieinstitutet
-          </Button>
-        </NavLink>
-      </Flex>
-      <EducationTimeline />
-      <h2
-        style={{ textAlign: "right", marginBottom: "1rem", marginTop: "1rem" }}
-      >
-        Experience
-      </h2>
-      <ExperienceTimeline />
+      <TimelineTab />
       <Divider my="lg" color={buttonColor} />
       </Container>
     </div>
