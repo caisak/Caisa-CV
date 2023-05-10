@@ -13,7 +13,7 @@ const useStyles = createStyles((theme) => ({
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundImage: "url(/images/lakesup.jpg)",
-    //filter: "grayscale(100%)",  
+    filter: "grayscale(100%)",  
     paddingTop: `calc(${theme.spacing.xl} * 3)`,
     paddingBottom: `calc(${theme.spacing.xl} * 3)`,
     marginTop: "-8rem",
