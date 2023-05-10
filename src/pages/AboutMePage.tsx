@@ -1,4 +1,4 @@
-import { Button, createStyles, Flex, useMantineTheme } from "@mantine/core";
+import { Button, createStyles, Divider, Flex, useMantineTheme } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { NavLink } from "react-router-dom";
 import { ArticleCardImage } from "../components/ArticleCard";
@@ -23,13 +23,7 @@ const useStyles = createStyles((theme) => ({
           ? theme.colors.dark[6]
           : theme.colors.gray[0],
     },
-
-    [theme.fn.smallerThan("sm")]: {
-      borderRadius: 0,
-      padding: theme.spacing.md,
-    },
   },
-
 }));
 
 export function AboutMePage() {
@@ -37,11 +31,14 @@ export function AboutMePage() {
   const { classes, cx } = useStyles();
   const theme = useMantineTheme();
   const buttonColor = theme.colorScheme === "dark" ? "gray.1" : "dark";
+  
   return (
     <div>
       <HeroImageRight />
+      <h2>Technical Skills</h2>
       <ProgressCard />
       <h3>Svelte, Styled components, chakra ui, mantine ui, bootstrap</h3>
+      <Divider my="lg" color={buttonColor} />
       <Flex
         justify="space-between"
         align="center"
@@ -50,27 +47,26 @@ export function AboutMePage() {
         <h2>Selected Projects</h2>
         <NavLink to="/portfolio" className={classes.link}>
           <Button variant="outline" color={buttonColor} radius="lg">
-          Go to Portfolio
+            Go to Portfolio
           </Button>
-          
         </NavLink>
       </Flex>
       <Flex direction={isMobile ? "column" : "row"} gap="xl" align="center">
         <ArticleCardImage
-          image="/images/bobablissp.png"
           link="https://bobabliss.netlify.app/"
+          image="/images/bobablissp.png"
           website="Go to Boba Bliss"
         />
 
         <ArticleCardImage
+        link="https://vegokassen.netlify.app/"
           image="/images/vegokassenp.png"
-          link="https://vegokassen.netlify.app/"
           website="Go to Vegokassen"
         />
 
         <ArticleCardImage
+        link="https://lysmac.github.io/moon-mission/"
           image="/images/moonmissionp.png"
-          link="https://lysmac.github.io/moon-mission/"
           website="Go to Moon Mission"
         />
       </Flex>

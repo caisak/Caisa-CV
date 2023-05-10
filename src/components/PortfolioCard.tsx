@@ -1,4 +1,4 @@
-import { AspectRatio, Button, Card, Center, Container, createStyles, Divider, Image, SimpleGrid, Text } from '@mantine/core';
+import { AspectRatio, Button, Card, Center, Container, createStyles, Divider, Image, SimpleGrid, Text, useMantineTheme } from '@mantine/core';
 
 const portfolioData = [
   {
@@ -61,8 +61,6 @@ const useStyles = createStyles((theme) => ({
 
   button: {
     margin: '1rem',
-    radius: "sm",
-    size: "sm"
   },
 
 
@@ -70,6 +68,8 @@ const useStyles = createStyles((theme) => ({
 
 export function ArticlesCardsGrid() {
   const { classes } = useStyles();
+  const theme = useMantineTheme();
+  const buttonColor = theme.colorScheme === "dark" ? "gray.1" : "dark";
 
   const cards = portfolioData.map((article) => (
     <Card key={article.title} p="md" radius="md" className={classes.card}>
@@ -85,15 +85,21 @@ export function ArticlesCardsGrid() {
       <Divider my="sm" />
       <Text tt="uppercase" fw={700} fz="xs">{article.build}</Text>
       <Center>
-      <Button className={classes.button} color="gray"  
+      <Button className={classes.button} color={buttonColor}
+      variant="outline" 
+      radius="lg"  
+      size="md"
       component="a"
       href={article.github}
       target="_blank"
       rel="noopener noreferrer"
       >
-      View on GitHub
+      View on GitHub 
     </Button>
-    <Button className={classes.button} color="green" 
+    <Button className={classes.button} color={buttonColor} 
+    variant="outline" 
+    radius="lg"
+    size="md"
       component="a"
       href={article.link}
       target="_blank"

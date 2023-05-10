@@ -1,4 +1,4 @@
-import { Button, createStyles, Paper, rem, Title } from '@mantine/core';
+import { Button, createStyles, Paper, rem } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   card: {
