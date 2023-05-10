@@ -1,9 +1,10 @@
-import { createStyles, Flex } from "@mantine/core";
+import { Button, createStyles, Flex, useMantineTheme } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { NavLink } from "react-router-dom";
 import { ArticleCardImage } from "../components/ArticleCard";
 import { EducationTimeline } from "../components/EducationTimeline";
 import { ExperienceTimeline } from "../components/ExperienceTimeline";
+import { HeroImageRight } from "../components/Hero";
 import { ProgressCard } from "../components/TechSkills";
 
 const useStyles = createStyles((theme) => ({
@@ -34,9 +35,11 @@ const useStyles = createStyles((theme) => ({
 export function AboutMePage() {
   const isMobile = useMediaQuery("(max-width: 768px)");
   const { classes, cx } = useStyles();
+  const theme = useMantineTheme();
+  const buttonColor = theme.colorScheme === "dark" ? "gray.1" : "dark";
   return (
     <div>
-      <h1>About Me</h1>
+      <HeroImageRight />
       <ProgressCard />
       <h3>Svelte, Styled components, chakra ui, mantine ui, bootstrap</h3>
       <Flex
@@ -46,7 +49,10 @@ export function AboutMePage() {
       >
         <h2>Selected Projects</h2>
         <NavLink to="/portfolio" className={classes.link}>
-          <h2>Go to Portfolio </h2>
+          <Button variant="outline" color={buttonColor} radius="lg">
+          Go to Portfolio
+          </Button>
+          
         </NavLink>
       </Flex>
       <Flex direction={isMobile ? "column" : "row"} gap="xl" align="center">
