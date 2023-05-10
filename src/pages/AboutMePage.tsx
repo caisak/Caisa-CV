@@ -1,5 +1,6 @@
 import {
   Button,
+  Container,
   createStyles,
   Divider,
   Flex,
@@ -41,6 +42,7 @@ export function AboutMePage() {
   return (
     <div>
       <HeroImageRight />
+      <Container size="xl">
       <h2>Technical Skills</h2>
       <ProgressCard />
       <h3>Svelte, Styled components, chakra ui, mantine ui, bootstrap</h3>
@@ -100,7 +102,7 @@ export function AboutMePage() {
       </h2>
       <ExperienceTimeline />
       <Divider my="lg" color={buttonColor} />
-
+      </Container>
     </div>
   );
 }
