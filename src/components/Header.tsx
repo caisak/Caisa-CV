@@ -46,6 +46,12 @@ const useStyles = createStyles((theme) => ({
     height: "100%",
   },
 
+  titleLink: {
+    textDecoration: 'none',
+    color: theme.colorScheme === "dark" ? theme.colors.gray[1] : theme.colors.dark[9],
+  },
+  
+
   links: {
     [theme.fn.smallerThan("sm")]: {
       display: "none",
@@ -67,9 +73,7 @@ const useStyles = createStyles((theme) => ({
     color:
       theme.colorScheme === "dark"
         ? theme.colors.dark[0]
-        : theme.colors.gray[7],
-    fontSize: theme.fontSizes.sm,
-    fontWeight: 500,
+        : theme.colors.gray[1],
 
     [theme.fn.smallerThan("sm")]: {
       borderRadius: 0,
@@ -110,7 +114,9 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
             <span>
               <ActionToggle />
             </span>
+            <NavLink to="/" className={classes.titleLink}>
             <span>Caisa Köhlin</span>
+            </NavLink>
           </span>
         </Title>
         <Group spacing={5} className={classes.links}>
