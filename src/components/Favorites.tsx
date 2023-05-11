@@ -3,35 +3,31 @@ import { Box, Divider, Flex, Text } from "@mantine/core";
 const favoriteData = [
     {
         favorite: 'Book',
-        answer: 'Smip',
+        answer: 'Night Sky with Exit Wounds',
     },
     {
-        favorite: 'Book',
-        answer: 'Smip',
+        favorite: 'TV Show',
+        answer: 'Bobs Burgers',
     },
     {
-        favorite: 'Book',
-        answer: 'Smip',
+        favorite: 'Drink',
+        answer: 'Brown Sugar Boba',
     },
     {
-        favorite: 'Book',
-        answer: 'Smip',
+        favorite: 'Quote',
+        answer: 'Today is tomorrows yesterday',
     },
     {
-        favorite: 'Book',
-        answer: 'Smip',
+        favorite: 'Writing Utensil',
+        answer: 'Fountain Pen or Gel Pen',
     },
     {
-        favorite: 'Book',
-        answer: 'Smip',
+        favorite: 'Song',
+        answer: 'Cha Cha Cha',
     },
     {
-        favorite: 'Book',
-        answer: 'Smip',
-    },
-    {
-        favorite: 'Book',
-        answer: 'Smip',
+        favorite: 'Time of day',
+        answer: 'Morning',
     },
 
 ]
@@ -40,8 +36,8 @@ export function Favorites() {
     const favoriteList = favoriteData.map((favorite) => (
         <div key={favorite.favorite}>
         <Flex direction="row">
-        <Text mt="0.55rem" mr="xl">{favorite.favorite}</Text>
-        <Box>
+        <Text mt="0.55rem" mr="xl" fw={700} style={{ width: "12rem" }}>{favorite.favorite}</Text>
+        <Box style={{ width: "100%" }}>
         <Divider />
             <Text mt="0.5rem" mb="0.5rem">
             {favorite.answer}
