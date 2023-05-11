@@ -19,7 +19,7 @@ const HEADER_HEIGHT = rem(60);
 
 const useStyles = createStyles((theme) => ({
   root: {
-    position: "relative",
+    position: "fixed",
     zIndex: 1,    
   },
 

@@ -17,7 +17,7 @@ const useStyles = createStyles((theme) => ({
     filter: "grayscale(100%)",
     paddingTop: `calc(${theme.spacing.xl} * 3)`,
     paddingBottom: `calc(${theme.spacing.xl} * 3)`,
-    marginTop: "-8rem",
+    marginTop: "1rem",
     height: "100vh",
     display: "flex",
     alignItems: "center",
