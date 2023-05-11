@@ -8,7 +8,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   const headerLinks = [
-    { link: '/', label: 'About Me' },
+    { link: '/', label: 'HomePage' },
     { link: '/portfolio', label: 'Portfolio' },
   ]
 
