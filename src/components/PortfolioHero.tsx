@@ -1,138 +1,139 @@
 import {
   Button,
+  Center,
   Container,
   createStyles,
-  Overlay,
   rem,
   Text,
-  Title,
+  Title
 } from "@mantine/core";
 import { NavLink } from "react-router-dom";
 
 const useStyles = createStyles((theme) => ({
-  wrapper: {
-    position: "relative",
-    paddingTop: rem(180),
-    paddingBottom: rem(130),
-    backgroundImage: "url(/images/lakesup.jpg)",
+  root: {
+    backgroundColor: "#11284b",
     backgroundSize: "cover",
     backgroundPosition: "center",
+    backgroundImage: "url(/images/lakesup.jpg)",
+    filter: "grayscale(100%)",
+    paddingTop: `calc(${theme.spacing.xl} * 3)`,
+    paddingBottom: `calc(${theme.spacing.xl} * 3)`,
+    marginTop: "1rem",
     height: "100vh",
-    marginTop: "3.7rem",
-
-    [theme.fn.smallerThan("xs")]: {
-      paddingTop: rem(80),
-      paddingBottom: rem(50),
-    },
+    display: "flex",
+    alignItems: "center",
   },
 
   inner: {
-    position: "relative",
-    zIndex: 1,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+
+    [theme.fn.smallerThan("md")]: {
+      flexDirection: "column",
+ 
+    },
+  },
+
+  image: {
+    [theme.fn.smallerThan("md")]: {
+      display: "none",
+    },
+  },
+
+  content: {
+    paddingTop: `calc(${theme.spacing.xl} * 2)`,
+    paddingBottom: `calc(${theme.spacing.xl} * 2)`,
+    marginRight: `calc(${theme.spacing.xl} * 3)`,
+
+    [theme.fn.smallerThan("md")]: {
+      marginRight: 0,
+      
+    },
   },
 
   title: {
-    fontWeight: 800,
-    fontSize: rem(40),
-    letterSpacing: rem(-1),
-    paddingLeft: theme.spacing.md,
-    paddingRight: theme.spacing.md,
     color: theme.white,
-    marginBottom: theme.spacing.xs,
-    textAlign: "center",
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+    fontWeight: 900,
+    lineHeight: 1.05,
+    maxWidth: rem(500),
+    fontSize: rem(48),
 
-    [theme.fn.smallerThan("xs")]: {
-      fontSize: rem(28),
-      textAlign: "left",
+    [theme.fn.smallerThan("md")]: {
+      maxWidth: "100%",
+      fontSize: rem(34),
+      lineHeight: 1.15,
     },
-  },
-
-  highlight: {
-    color: theme.colors[theme.primaryColor][4],
   },
 
   description: {
-    color: theme.colors.gray[0],
-    textAlign: "center",
+    color: theme.white,
+    opacity: 0.75,
+    maxWidth: rem(500),
 
-    [theme.fn.smallerThan("xs")]: {
-      fontSize: theme.fontSizes.md,
-      textAlign: "left",
-    },
-  },
-
-  controls: {
-    marginTop: `calc(${theme.spacing.xl} * 1.5)`,
-    display: "flex",
-    justifyContent: "center",
-    paddingLeft: theme.spacing.md,
-    paddingRight: theme.spacing.md,
-
-    [theme.fn.smallerThan("xs")]: {
-      flexDirection: "column",
+    [theme.fn.smallerThan("md")]: {
+      maxWidth: "100%",
     },
   },
 
   control: {
-    height: rem(42),
-    fontSize: theme.fontSizes.md,
+    paddingLeft: rem(50),
+    paddingRight: rem(50),
+    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+    fontSize: rem(22),
 
-    "&:not(:first-of-type)": {
-      marginLeft: theme.spacing.md,
-    },
-
-    [theme.fn.smallerThan("xs")]: {
-      "&:not(:first-of-type)": {
-        marginTop: theme.spacing.md,
-        marginLeft: 0,
-      },
+    [theme.fn.smallerThan("md")]: {
+      width: "100%",
     },
   },
-
 }));
 
-export function HeroImageBackground() {
-  const { classes, cx } = useStyles();
-
+export function PortfolioHero() {
+  const { classes } = useStyles();
   return (
-    <div className={classes.wrapper}>
-      <Overlay color="#000" opacity={0.65} zIndex={1} />
-
-      <div className={classes.inner}>
-        <Title className={classes.title}>Portfolio</Title>
-
-        <Container size={640}>
-          <Text size="lg" className={classes.description}>
-            Check out some of my projects
-          </Text>
-        </Container>
-
-        <div className={classes.controls}>
-          <NavLink to="https://github.com/caisak">
-            <Button
-              className={classes.control}
-              variant="outline"
-              color="gray.1"
-              size="lg"
-              radius="lg"
-            >
-              GitHub
-            </Button>
-          </NavLink>
-          <NavLink to="https://bobabliss.netlify.app/">
-            <Button
-              className={cx(classes.control)}
-              variant="outline"
-              color="gray.1"
-              radius="lg"
-              size="lg"
-            >
-              Latest Project
-            </Button>
-          </NavLink>
+    <div className={classes.root}>
+      <Container size="lg">
+        <div className={classes.inner}>
+          <div className={classes.content}>
+            <Center>
+            <Title className={classes.title}>Portfolio</Title>
+            </Center>
+            <Center>
+            <Text className={classes.description} fw={700} mt={30}>
+              Check out some of my latest projects
+            </Text>
+            </Center>
+            <Center>
+              <NavLink to="https://github.com/caisak">
+              <Button
+                variant="outline"
+                color="gray.1"
+                radius="lg"
+                size="lg"
+                className={classes.control}
+                mt={40}
+              >
+                GitHub
+              </Button>
+              </NavLink>
+              <NavLink to="https://bobabliss.netlify.app/">
+              <Button
+                variant="outline"
+                color="gray.1"
+                radius="lg"
+                size="lg"
+                className={classes.control}
+                mt={40}
+              >
+                Latest Project
+              </Button>
+              </NavLink>
+            </Center>
+          </div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 }
