@@ -62,7 +62,7 @@ export function TechKnowledge() {
         backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
       })}
     >
-      <Grid gutter="md">
+      <Grid gutter="xl">
         {icons.map(({ Icon, title }) => (
           <Col span={6} sm={6} xs={6} key={title}>
             <div style={{ textAlign: 'center' }}>

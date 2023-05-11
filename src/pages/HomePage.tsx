@@ -7,6 +7,7 @@ import {
 } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { ArticleCardImage } from "../components/ArticleCard";
+import { Favorites } from "../components/Favorites";
 import { HeroImageRight } from "../components/Hero";
 import { Info, ProfileImage } from "../components/Info";
 import { SectionDivider } from "../components/SectionDivider";
@@ -86,6 +87,11 @@ export function HomePage() {
             website="Go to Moon Mission"
           />
         </Flex>
+        <SectionDivider
+          buttonText="Go to Medieinstitutet"
+          link="https://medieinstitutet.se/utbildningar/front-end-developer/"
+          title="Education and Experience"
+        />
         <TimelineTab />
         <SectionDivider
           buttonText="Go to LinkedIn"
@@ -99,6 +105,20 @@ export function HomePage() {
             </Col>
             <Col span={12} md={6}>
               <Info />
+            </Col>
+          </Grid>
+        </Container>
+        <SectionDivider
+          buttonText="Go to Medieinstitutet"
+          link="https://medieinstitutet.se/utbildningar/front-end-developer/"
+          title="My Favorites"
+        />
+        <Container size="lg" p="xl">
+          <Grid gutter="lg">
+            <Col span={12} md={6}>
+            </Col>
+            <Col span={12} md={6}>
+              <Favorites />
             </Col>
           </Grid>
         </Container>
