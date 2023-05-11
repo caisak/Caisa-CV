@@ -99,6 +99,18 @@ export function AboutMePage() {
       </Flex>
       <TimelineTab />
       <Divider my="lg" color={buttonColor} />
+      <Flex
+        justify="space-between"
+        align="center"
+        style={{ marginBottom: "1rem", marginTop: "1rem" }}
+      >
+        <h2>About Me</h2>
+        <NavLink to="https://www.linkedin.com/in/caisa-kohlin" className={classes.link}>
+          <Button variant="outline" color={buttonColor} radius="lg">
+            Go to LinkedIn
+          </Button>
+        </NavLink>
+      </Flex>
     <Container size="lg" p="xl">
       <Grid gutter="lg">
         <Col span={12} md={6}>
