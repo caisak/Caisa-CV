@@ -109,7 +109,7 @@ export function HomePage() {
           </Grid>
         </Container>
         <SectionDivider
-          buttonText="Go outside"
+          buttonText="Favorite Website"
           link="/"
           title="My Favorites"
         />
