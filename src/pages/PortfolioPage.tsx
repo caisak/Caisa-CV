@@ -1,11 +1,15 @@
 import { Container } from "@mantine/core";
 import { ArticlesCardsGrid } from "../components/PortfolioCard";
+import { HeroImageBackground } from "../components/PortfolioHero";
 
 export function PortfolioPage() {
     return(
-    <Container size="lg">
+    <div>
+        <HeroImageBackground />
+        <Container size="xl">
         <h1>Portfolio</h1>
         <ArticlesCardsGrid />
         </Container>
+        </div>
     )
 }
