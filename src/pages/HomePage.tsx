@@ -1,15 +1,15 @@
 import {
-  Button,
   Col,
-  Container, createStyles,
-  Divider,
-  Flex, Grid, useMantineTheme
+  Container,
+  createStyles, Flex,
+  Grid,
+  useMantineTheme
 } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
-import { NavLink } from "react-router-dom";
 import { ArticleCardImage } from "../components/ArticleCard";
 import { HeroImageRight } from "../components/Hero";
 import { Info, ProfileImage } from "../components/Info";
+import { SectionDivider } from "../components/SectionDivider";
 import { TimelineTab } from "../components/Tabs";
 import { ProgressCard, TechKnowledge } from "../components/TechSkills";
 
@@ -41,86 +41,67 @@ export function HomePage() {
   return (
     <div>
       <HeroImageRight />
-      <Divider color={buttonColor} />
       <Container size="xl">
-      <Flex
-        justify="space-between"
-        align="center"
-        style={{ marginBottom: "1rem", marginTop: "1rem" }}
-      >
-        <h2>Technical Skills</h2>
-        <NavLink to="https://github.com/caisak" className={classes.link}>
-          <Button variant="outline" color={buttonColor} radius="lg">
-            Go to GitHub
-          </Button>
-        </NavLink>
+        <SectionDivider
+          buttonText="Go to GitHub"
+          link="https://github.com/caisak"
+          title="Technical Skills"
+        />
+        <Container size="lg" p="xl">
+          <Grid gutter="lg">
+            <Col span={12} md={6}>
+              <ProgressCard />
+            </Col>
+            <Col span={12} md={6}>
+              <TechKnowledge />
+            </Col>
+          </Grid>
+        </Container>
+        <SectionDivider
+          buttonText="Go to Portfolio"
+          link="/portfolio"
+          title="Selected Projects"
+        />
+        <Flex
+          direction={isMobile ? "column" : "row"}
+          gap="xl"
+          align="center"
+          mb="xl"
+        >
+          <ArticleCardImage
+            link="https://bobabliss.netlify.app/"
+            image="/images/bobablissp.png"
+            website="Go to Boba Bliss"
+          />
+
+          <ArticleCardImage
+            link="https://vegokassen.netlify.app/"
+            image="/images/vegokassenp.png"
+            website="Go to Vegokassen"
+          />
+
+          <ArticleCardImage
+            link="https://lysmac.github.io/moon-mission/"
+            image="/images/moonmissionp.png"
+            website="Go to Moon Mission"
+          />
         </Flex>
-      <Container size="lg" p="xl">
-      <Grid gutter="lg">
-        <Col span={12} md={6}>
-          <ProgressCard />
-        </Col>
-        <Col span={12} md={6}>
-          <TechKnowledge />
-        </Col>
-      </Grid>
-    </Container>
-      <Divider my="lg" color={buttonColor} />
-      <Flex
-        justify="space-between"
-        align="center"
-        style={{ marginBottom: "1rem", marginTop: "1rem" }}
-      >
-        <h2>Selected Projects</h2>
-        <NavLink to="/portfolio" className={classes.link}>
-          <Button variant="outline" color={buttonColor} radius="lg">
-            Go to Portfolio
-          </Button>
-        </NavLink>
-      </Flex>
-      <Flex direction={isMobile ? "column" : "row"} gap="xl" align="center" mb="xl">
-        <ArticleCardImage
-          link="https://bobabliss.netlify.app/"
-          image="/images/bobablissp.png"
-          website="Go to Boba Bliss"
+        <TimelineTab />
+        <SectionDivider
+          buttonText="Go to LinkedIn"
+          link="https://www.linkedin.com/in/caisa-kohlin"
+          title="About Me"
         />
-
-        <ArticleCardImage
-          link="https://vegokassen.netlify.app/"
-          image="/images/vegokassenp.png"
-          website="Go to Vegokassen"
-        />
-
-        <ArticleCardImage
-          link="https://lysmac.github.io/moon-mission/"
-          image="/images/moonmissionp.png"
-          website="Go to Moon Mission"
-        />
-      </Flex>
-      <TimelineTab />
-      <Divider my="lg" color={buttonColor} />
-      <Flex
-        justify="space-between"
-        align="center"
-        style={{ marginBottom: "1rem", marginTop: "1rem" }}
-      >
-        <h2>About Me</h2>
-        <NavLink to="https://www.linkedin.com/in/caisa-kohlin" className={classes.link}>
-          <Button variant="outline" color={buttonColor} radius="lg">
-            Go to LinkedIn
-          </Button>
-        </NavLink>
-      </Flex>
-    <Container size="lg" p="xl">
-      <Grid gutter="lg">
-        <Col span={12} md={6}>
-      <ProfileImage />
-      </Col>
-      <Col span={12} md={6}>
-      <Info />
-      </Col>
-      </Grid>
-      </Container>
+        <Container size="lg" p="xl">
+          <Grid gutter="lg">
+            <Col span={12} md={6}>
+              <ProfileImage />
+            </Col>
+            <Col span={12} md={6}>
+              <Info />
+            </Col>
+          </Grid>
+        </Container>
       </Container>
     </div>
   );
