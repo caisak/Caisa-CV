@@ -1,11 +1,11 @@
+import { Container } from "@mantine/core";
 import { ArticlesCardsGrid } from "../components/PortfolioCard";
-import { TimelineTab } from "../components/Tabs";
 
 export function PortfolioPage() {
     return(
-    <div>
+    <Container size="lg">
         <h1>Portfolio</h1>
         <ArticlesCardsGrid />
-    </div>
+        </Container>
     )
 }
