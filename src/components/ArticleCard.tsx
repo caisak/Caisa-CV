@@ -1,15 +1,21 @@
-import { Button, createStyles, Paper, rem } from '@mantine/core';
+import { Button, createStyles, Paper, rem } from "@mantine/core";
 
 const useStyles = createStyles((theme) => ({
   card: {
     height: rem(200),
-    width: '30rem',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    alignItems: 'flex-start',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
+    width: "30rem",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    alignItems: "flex-start",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    transition: "transform 150ms ease, box-shadow 150ms ease",
+
+    "&:hover": {
+      transform: "scale(1.01)",
+      boxShadow: theme.shadows.md,
+    },
   },
 
   title: {
@@ -25,7 +31,7 @@ const useStyles = createStyles((theme) => ({
     color: theme.white,
     opacity: 0.7,
     fontWeight: 700,
-    textTransform: 'uppercase',
+    textTransform: "uppercase",
   },
 }));
 
@@ -35,7 +41,11 @@ interface ArticleCardImageProps {
   website: string;
 }
 
-export function ArticleCardImage({ image, link, website }: ArticleCardImageProps) {
+export function ArticleCardImage({
+  image,
+  link,
+  website,
+}: ArticleCardImageProps) {
   const { classes } = useStyles();
 
   return (
@@ -46,12 +56,12 @@ export function ArticleCardImage({ image, link, website }: ArticleCardImageProps
       sx={{ backgroundImage: `url(${image})` }}
       className={classes.card}
     >
-      <div>
-      </div>
-      <Button variant="filled" 
-      color="dark"
-      radius="lg"
-      component="a"
+      <div></div>
+      <Button
+        variant="filled"
+        color="dark"
+        radius="lg"
+        component="a"
         href={link}
         target="_blank"
         rel="noopener noreferrer"
