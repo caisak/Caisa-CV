@@ -109,8 +109,8 @@ export function HomePage() {
           </Grid>
         </Container>
         <SectionDivider
-          buttonText="Go to Medieinstitutet"
-          link="https://medieinstitutet.se/utbildningar/front-end-developer/"
+          buttonText="Go outside"
+          link="/"
           title="My Favorites"
         />
         <Container size="lg" p="xl">

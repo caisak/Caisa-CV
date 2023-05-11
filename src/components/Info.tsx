@@ -2,13 +2,11 @@ import {
   Card,
   createStyles,
   Divider,
-  Flex,
-  List,
-  Paper,
+  Flex, Paper,
   Progress,
   Text,
   Title,
-  useMantineTheme,
+  useMantineTheme
 } from "@mantine/core";
 
 const useStyles = createStyles((theme) => ({
