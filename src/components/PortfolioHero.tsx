@@ -19,7 +19,7 @@ const useStyles = createStyles((theme) => ({
     paddingTop: `calc(${theme.spacing.xl} * 3)`,
     paddingBottom: `calc(${theme.spacing.xl} * 3)`,
     marginTop: "1rem",
-    height: "100vh",
+    height: "60vh",
     display: "flex",
     alignItems: "center",
   },

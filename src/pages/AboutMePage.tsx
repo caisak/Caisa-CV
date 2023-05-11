@@ -9,6 +9,7 @@ import { useMediaQuery } from "@mantine/hooks";
 import { NavLink } from "react-router-dom";
 import { ArticleCardImage } from "../components/ArticleCard";
 import { HeroImageRight } from "../components/Hero";
+import { Info } from "../components/Info";
 import { TimelineTab } from "../components/Tabs";
 import { ProgressCard, TechKnowledge } from "../components/TechSkills";
 
@@ -98,6 +99,7 @@ export function AboutMePage() {
       </Flex>
       <TimelineTab />
       <Divider my="lg" color={buttonColor} />
+      <Info />
       </Container>
     </div>
   );
