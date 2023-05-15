@@ -2,7 +2,8 @@ import {
   Card,
   createStyles,
   Divider,
-  Flex, Paper,
+  Flex,
+  Paper,
   Progress,
   Text,
   Title,
@@ -25,14 +26,53 @@ export function Info() {
           Hi! I'm Caisa
         </Title>
         <Divider />
-        <Text mt="xs">Front End developer student</Text>
+        <Text mt="xs">Front End Developer</Text>
 
         <Text mt="3rem" mb="4rem">
-          Text about me bla bla bla what do i want to say no idea but i guess i
-          have to say something so eh here goes the sun is sunny and the moon is
-          moony
+          On my days off you're likely to find me paddle boarding, reading a
+          good book or trying new foods. I am forever expanding my knowledge and
+          understanding of the world and the people in it. I am also most
+          passionate about knitting - a craft that requires patience
+          and precision - much like programming.
+          <br></br>
+          <br></br>
+          I’m currently working as a barista and this has not only allowed me to
+          make a mean cappuccino but has also taught me invaluable lessons about
+          teamwork, customer service, and the art of managing high-pressure
+          situations with grace and integrity.
+          <br></br>
+          <br></br>
+          In the long term, I envision myself transitioning into a Project
+          Management role. I am excited by the prospect of leading diverse
+          teams, managing resources, and delivering projects that exceed client
+          expectations.
+          <br></br>
+          <br></br>
+          As you can see, I am a blend of creativity, technical prowess, and
+          social skills. I am a firm believer in balancing work and play, and I
+          strive to bring a sense of joy and enthusiasm to everything I do. I
+          look forward to bringing my unique blend of skills and passions to a
+          team where I can learn, grow, and contribute positively.
         </Text>
-        <Card>
+      </div>
+    </Paper>
+  );
+}
+
+export function ProfileImage() {
+  return (
+    <div>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+    <img
+      style={{
+        height: '27rem',
+        objectFit: "cover",
+      }}
+      src="./images/caisa.jpg"
+      alt="profile picture"
+    />
+    </div>
+    <Card style={{ marginTop: "1rem", }}>
           <Flex direction="column">
             <Title order={6} mb="xs">
               Languages
@@ -41,7 +81,7 @@ export function Info() {
               English
             </Text>
             <Progress
-              value={80.00}
+              value={80.0}
               mb="md"
               size="lg"
               radius="xs"
@@ -51,7 +91,7 @@ export function Info() {
               Swedish
             </Text>
             <Progress
-              value={100.00}
+              value={100.0}
               mb="md"
               size="lg"
               radius="xs"
@@ -61,7 +101,7 @@ export function Info() {
               Spanish
             </Text>
             <Progress
-              value={35.00}
+              value={35.0}
               mb="md"
               size="lg"
               radius="xs"
@@ -69,21 +109,6 @@ export function Info() {
             />
           </Flex>
         </Card>
-
-      </div>
-    </Paper>
-  );
-}
-
-export function ProfileImage() {
-  return (
-    <img
-      style={{
-        height: "30rem",
-        objectFit: "cover",
-      }}
-      src="./images/caisa.jpg"
-      alt="profile picture"
-    />
+        </div>
   );
 }
