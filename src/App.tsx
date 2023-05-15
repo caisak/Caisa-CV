@@ -15,7 +15,7 @@ function App() {
   const footerLinks = [
     { link: 'https://github.com/caisak', label: 'GitHub' },
     { link: 'https://www.linkedin.com/in/caisa-kohlin', label: 'LinkedIn' },
-    { link: '/email', label: 'Email' },
+    { link: 'mailto:caisa.kohlin@medieinstitutet.se', label: 'Email' },
   ]
 
   return (
