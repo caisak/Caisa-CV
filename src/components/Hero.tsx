@@ -3,10 +3,11 @@ import {
   Center,
   Container,
   createStyles,
-  rem,
-  Text,
-  Title
+  Divider,
+  Flex,
+  rem, Title
 } from "@mantine/core";
+import { AnimatedTitle } from "./AnimatedTitle";
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -14,7 +15,7 @@ const useStyles = createStyles((theme) => ({
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundImage: "url(/images/lakesup.jpg)",
-    filter: theme.colorScheme === 'dark' ? 'grayscale(100%)' : 'none',
+    filter: theme.colorScheme === "dark" ? "grayscale(100%)" : "none",
     paddingTop: `calc(${theme.spacing.xl} * 3)`,
     paddingBottom: `calc(${theme.spacing.xl} * 3)`,
     marginTop: "1rem",
@@ -31,7 +32,6 @@ const useStyles = createStyles((theme) => ({
 
     [theme.fn.smallerThan("md")]: {
       flexDirection: "column",
- 
     },
   },
 
@@ -48,7 +48,6 @@ const useStyles = createStyles((theme) => ({
 
     [theme.fn.smallerThan("md")]: {
       marginRight: 0,
-      
     },
   },
 
@@ -96,13 +95,15 @@ export function HeroImageRight() {
       <Container size="lg">
         <div className={classes.inner}>
           <div className={classes.content}>
-            <Center>
-            <Title className={classes.title}>Making waves</Title>
-            </Center>
-
-            <Text className={classes.description} fw={700} mt={30}>
-              Doing stuff with people and getting paid
-            </Text>
+            <Flex>
+              <Title mr="lg" className={classes.title}>
+                Caisa Köhlin
+              </Title>
+              <Divider size="xl" orientation="vertical" color="white" />
+              <Title ml="lg" className={classes.title}>
+                <AnimatedTitle />
+              </Title>
+            </Flex>
             <Center>
               <Button
                 variant="outline"
@@ -112,7 +113,7 @@ export function HeroImageRight() {
                 className={classes.control}
                 mt={40}
               >
-                Hire me
+                Get in touch
               </Button>
             </Center>
           </div>
