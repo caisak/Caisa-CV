@@ -5,7 +5,8 @@ import {
   createStyles,
   Divider,
   Flex,
-  rem, Title
+  rem,
+  Title
 } from "@mantine/core";
 import { AnimatedTitle } from "./AnimatedTitle";
 
@@ -105,16 +106,18 @@ export function HeroImageRight() {
               </Title>
             </Flex>
             <Center>
-              <Button
-                variant="outline"
-                color="gray.1"
-                radius="lg"
-                size="lg"
-                className={classes.control}
-                mt={40}
-              >
-                Get in touch
-              </Button>
+              <a href="https://www.linkedin.com/in/caisa-kohlin" style={{ textDecoration: "none" }}>
+                <Button
+                  variant="outline"
+                  color="gray.1"
+                  radius="lg"
+                  size="lg"
+                  className={classes.control}
+                  mt={40}
+                >
+                  Get in touch
+                </Button>
+              </a>
             </Center>
           </div>
         </div>

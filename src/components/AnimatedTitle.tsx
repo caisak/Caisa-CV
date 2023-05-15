@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export function AnimatedTitle() {
   const [title, setTitle] = useState('Front End Developer');
-  const titles = ['Storyteller', 'Barista', 'Friend'];
+  const titles = ['Front End Developer', 'Storyteller', 'Barista', 'Friend'];
 
   useEffect(() => {
     const interval = setInterval(() => {
