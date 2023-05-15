@@ -60,6 +60,7 @@ export function Info() {
 }
 
 export function ProfileImage() {
+  const theme = useMantineTheme();
   return (
     <div>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -67,6 +68,7 @@ export function ProfileImage() {
       style={{
         height: '27rem',
         objectFit: "cover",
+        filter: theme.colorScheme === 'dark' ? 'grayscale(30%)' : 'none',
       }}
       src="./images/caisa.jpg"
       alt="profile picture"

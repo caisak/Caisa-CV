@@ -5,6 +5,7 @@ const useStyles = createStyles((theme) => ({
     height: rem(200),
     width: "30rem",
     display: "flex",
+    filter: theme.colorScheme === 'dark' ? 'grayscale(30%)' : 'none',
     flexDirection: "column",
     justifyContent: "space-between",
     alignItems: "flex-start",
