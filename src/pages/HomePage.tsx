@@ -110,7 +110,7 @@ export function HomePage() {
         </Container>
         <SectionDivider
           buttonText="Favorite Website"
-          link="/"
+          link="https://www.reddit.com/"
           title="My Favorites"
         />
         <Container size="lg" p="xl">

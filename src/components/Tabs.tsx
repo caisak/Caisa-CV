@@ -1,17 +1,16 @@
 import {
-  Button,
-  Center,
-  createStyles,
-  Flex,
+  Center, Flex,
   Tabs,
-  useMantineTheme,
+  useMantineTheme
 } from "@mantine/core";
 import { EducationTimeline } from "./EducationTimeline";
 import { ExperienceTimeline } from "./ExperienceTimeline";
 
 export function TimelineTab() {
+  const theme = useMantineTheme();
+  const buttonColor = theme.colorScheme === "dark" ? "gray.1" : "dark";
   return (
-    <Tabs color="teal" defaultValue="first">
+    <Tabs color={buttonColor} defaultValue="first">
       <Tabs.List position="center">
         <Center>
           <Tabs.Tab value="first">
