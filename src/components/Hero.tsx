@@ -106,7 +106,7 @@ export function HeroImageRight() {
               </Title>
             </Flex>
             <Center>
-              <a href="https://www.linkedin.com/in/caisa-kohlin" style={{ textDecoration: "none" }}>
+              <a href="mailto:caisa.kohlin@medieinstitutet.se" style={{ textDecoration: "none" }}>
                 <Button
                   variant="outline"
                   color="gray.1"

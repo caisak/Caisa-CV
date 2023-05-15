@@ -1,4 +1,4 @@
-import { ActionIcon, Anchor, createStyles, Group, rem, Title } from '@mantine/core';
+import { Anchor, createStyles, Group, rem, Title } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   footer: {
@@ -39,7 +39,6 @@ export function FooterCentered({ links }: FooterCenteredProps) {
       key={link.label}
       href={link.link}
       sx={{ lineHeight: 1 }}
-      onClick={(event) => event.preventDefault()}
       size="sm"
     >
       {link.label}
