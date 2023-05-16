@@ -1,5 +1,6 @@
 import {
   Card,
+  Center,
   createStyles,
   Divider,
   Flex,
@@ -63,6 +64,7 @@ export function ProfileImage() {
   const theme = useMantineTheme();
   return (
     <div>
+      <Flex direction="column">
       <div style={{ display: 'flex', justifyContent: 'center' }}>
     <img
       style={{
@@ -74,7 +76,8 @@ export function ProfileImage() {
       alt="profile picture"
     />
     </div>
-    <Card style={{ marginTop: "1rem", }}>
+    <Center>
+    <Card style={{ marginTop: "1rem", width: '21rem',  }}>
           <Flex direction="column">
             <Title order={6} mb="xs">
               Languages
@@ -111,6 +114,8 @@ export function ProfileImage() {
             />
           </Flex>
         </Card>
+        </Center>
+        </Flex>
         </div>
   );
 }
