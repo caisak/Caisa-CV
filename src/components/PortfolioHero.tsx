@@ -81,6 +81,7 @@ const useStyles = createStyles((theme) => ({
   control: {
     paddingLeft: rem(50),
     paddingRight: rem(50),
+    margin: '1rem',
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
     fontSize: rem(22),
 
@@ -116,18 +117,6 @@ export function PortfolioHero() {
                 mt={40}
               >
                 GitHub
-              </Button>
-              </NavLink>
-              <NavLink to="https://bobabliss.netlify.app/">
-              <Button
-                variant="outline"
-                color="gray.1"
-                radius="lg"
-                size="lg"
-                className={classes.control}
-                mt={40}
-              >
-                Latest Project
               </Button>
               </NavLink>
             </Center>
