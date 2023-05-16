@@ -4,14 +4,14 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
 import App from './App';
 import './main.css';
-import { HomePage } from './pages/HomePage';
+import { AboutMePage } from './pages/AboutMePage';
 import { NotFound } from './pages/NotFound';
 import { PortfolioPage } from './pages/PortfolioPage';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      <Route index element={<HomePage />} />
+      <Route index element={<AboutMePage />} />
       <Route path="portfolio" element={<PortfolioPage />} />
       <Route path="*" element={<NotFound />} />
     </Route>

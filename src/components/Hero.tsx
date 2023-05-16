@@ -16,7 +16,7 @@ const useStyles = createStyles((theme) => ({
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundImage: "url(/images/lakesup.jpg)",
-    filter: theme.colorScheme === "dark" ? "grayscale(100%)" : "none",
+    //filter: theme.colorScheme === "dark" ? "grayscale(100%)" : "none",
     paddingTop: `calc(${theme.spacing.xl} * 3)`,
     paddingBottom: `calc(${theme.spacing.xl} * 3)`,
     marginTop: "1rem",

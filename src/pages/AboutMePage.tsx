@@ -33,7 +33,7 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-export function HomePage() {
+export function AboutMePage() {
   const isMobile = useMediaQuery("(max-width: 768px)");
   const { classes, cx } = useStyles();
   const theme = useMantineTheme();
