@@ -41,6 +41,16 @@ const portfolioData = [
     website: 'Coming Soon',
     build: 'react, typescript, mantine ui, express, mongoose',
   },
+  {
+    title: 'Cat Chat',
+    image:
+      '../images/ccchat.png',
+    description: 'Cat Chat is sister app to Scratchpad - but for chatting. Choose a username and get started! Join an existing room or create a new room. Chat with your friends or make new ones.',
+    link: '/',
+    github: '/',
+    website: 'Coming Soon',
+    build: 'react, typescript, socket io, mantine ui',
+  },
 ];
 
 const useStyles = createStyles((theme) => ({
