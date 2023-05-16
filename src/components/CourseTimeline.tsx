@@ -12,7 +12,7 @@ export function CourseTimeline() {
           <Text size="xs" color="dimmed" mt={4}>20 Yh-points</Text>
         </Timeline.Item>
   
-        <Timeline.Item bullet={<CgFigma size={12} />}title="UX AND USABILITY">
+        <Timeline.Item bullet={<CgFigma size={12} />}title="Ux and Usability">
           <Text size="sm">Short description</Text>
           <Text size="xs" color="dimmed" mt={4}>15 Yh-points</Text>
         </Timeline.Item>
@@ -22,7 +22,7 @@ export function CourseTimeline() {
           <Text size="xs" color="dimmed" mt={4}>40 Yh-points</Text>
         </Timeline.Item>
   
-        <Timeline.Item bullet={<SiTypescript size={12} />}title="Javascript advanced">
+        <Timeline.Item bullet={<SiTypescript size={12} />}title="Javascript Advanced">
           <Text size="sm">Short description</Text>
           <Text size="xs" color="dimmed" mt={4}>60 Yh-points</Text>
         </Timeline.Item>
