@@ -18,23 +18,23 @@ export function ProgressCard() {
       <Text fz="xs" fw={500}>
       <ImHtmlFive />  HTML 
       </Text>
-      <Progress value={74.31} mb="md" size="lg" radius="xs" color="dark.3" />
+      <Progress value={74.00} mb="md" size="lg" radius="xs" color="dark.3" />
       <Text fz="xs" fw={500}>
       <IoLogoCss3 />  CSS 
       </Text>
-      <Progress value={74.51} mb="md" size="lg" radius="xs" color="dark.3" />
+      <Progress value={74.00} mb="md" size="lg" radius="xs" color="dark.3" />
       <Text fz="xs" fw={500}>
       <SiJavascript /> JavaScript
       </Text>
-      <Progress value={50.31} mb="md" size="lg" radius="xs" color="dark.3" />
+      <Progress value={50.00} mb="md" size="lg" radius="xs" color="dark.3" />
       <Text fz="xs" fw={500}>
       <SiTypescript />   TypeScript
       </Text>
-      <Progress value={55.31} mb="md" size="lg" radius="xs" color="dark.3" />
+      <Progress value={55.00} mb="md" size="lg" radius="xs" color="dark.3" />
       <Text fz="xs" fw={500}>
       <FaReact />  React
       </Text>
-       <Progress value={55.31} mb="md" size="lg" radius="xs" color="dark.3" />
+       <Progress value={60.00} mb="md" size="lg" radius="xs" color="dark.3" />
     </Card>
   );
 }
@@ -47,10 +47,10 @@ export function TechKnowledge() {
     { Icon: FaGit, title: "Git" },
     { Icon: SiSvelte, title: "Svelte" },
     { Icon: SiMongodb, title: "MongoDB" },
+    { Icon: CgFigma, title: "Figma" },
     { Icon: SiChakraui, title: "Chakra UI" },
     { Icon: TbBrandMantine, title: "Mantine" },
     { Icon: FaBootstrap, title: "Bootstrap" },
-    { Icon: CgFigma, title: "Figma" },
     { Icon: SiSocketdotio, title: "Socket.io" },
     { Icon: SiStyledcomponents, title: "Styled Components" },
     { Icon: SiAdobepremierepro, title: "Adobe Premiere Pro" },
@@ -72,6 +72,22 @@ export function TechKnowledge() {
           </Col>
         ))}
       </Grid>
+    </Card>
+  )
+}
+
+export function TechQuote() {
+  return(
+    <Card
+    padding="xl"
+    sx={(theme) => ({
+      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
+    })}
+    >
+      <Text fz="xl">
+      I'm constantly exploring new techniques, tools, and libraries to create websites that are easy and fun to use. Here are some of the tools that I have worked with!
+
+      </Text>
     </Card>
   )
 }

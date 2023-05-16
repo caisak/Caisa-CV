@@ -12,7 +12,7 @@ import { HeroImageRight } from "../components/Hero";
 import { Info, ProfileImage } from "../components/Info";
 import { SectionDivider } from "../components/SectionDivider";
 import { TimelineTab } from "../components/Tabs";
-import { ProgressCard, TechKnowledge } from "../components/TechSkills";
+import { ProgressCard, TechKnowledge, TechQuote } from "../components/TechSkills";
 
 const useStyles = createStyles((theme) => ({
   link: {
@@ -52,6 +52,7 @@ export function HomePage() {
           <Grid gutter="lg">
             <Col span={12} md={6}>
               <ProgressCard />
+              <TechQuote />
             </Col>
             <Col span={12} md={6}>
               <TechKnowledge />
