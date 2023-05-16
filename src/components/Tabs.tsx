@@ -3,6 +3,7 @@ import {
   Tabs,
   useMantineTheme
 } from "@mantine/core";
+import { CourseTimeline } from "./CourseTimeline";
 import { EducationTimeline } from "./EducationTimeline";
 import { ExperienceTimeline } from "./ExperienceTimeline";
 
@@ -17,7 +18,10 @@ export function TimelineTab() {
               Education
           </Tabs.Tab>
           <Tabs.Tab value="second">
-              Experience
+              Front End Developer
+          </Tabs.Tab>
+          <Tabs.Tab value="third">
+          Experience
           </Tabs.Tab>
         </Center>
       </Tabs.List>
@@ -30,7 +34,13 @@ export function TimelineTab() {
 
       <Tabs.Panel value="second" pt="xs">
         <Flex direction="column" justify="center" align="center" m="1rem">
-          <ExperienceTimeline />
+        <CourseTimeline />
+          
+        </Flex>
+      </Tabs.Panel>
+      <Tabs.Panel value="third" pt="xs">
+        <Flex direction="column" justify="center" align="center" m="1rem">
+        <ExperienceTimeline />
         </Flex>
       </Tabs.Panel>
     </Tabs>
