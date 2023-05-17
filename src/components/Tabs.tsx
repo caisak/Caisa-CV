@@ -18,7 +18,7 @@ export function TimelineTab() {
               Education
           </Tabs.Tab>
           <Tabs.Tab value="second">
-              Front End Developer
+              Medieinstitutet
           </Tabs.Tab>
           <Tabs.Tab value="third">
           Experience
