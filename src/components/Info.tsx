@@ -30,11 +30,7 @@ export function Info() {
         <Text mt="xs">Front End Developer</Text>
 
         <Text mt="3rem" mb="4rem">
-          On my days off you're likely to find me paddle boarding, reading a
-          good book or trying new foods. I am forever expanding my knowledge and
-          understanding of the world and the people in it. I am also most
-          passionate about knitting - a craft that requires patience
-          and precision - much like programming.
+          On my days off you're likely to find me paddle boarding, reading a good book or trying new foods. I am forever expanding my knowledge and understanding of the world and the people in it. I am also most passionate about knitting - a craft that requires patience and precision - much like programming.
           <br></br>
           <br></br>
           I’m currently working as a barista and this has not only allowed me to make specialty coffee drinks but has also taught me invaluable lessons about teamwork, customer service, and the art of managing high-pressure
