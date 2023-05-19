@@ -7,4 +7,4 @@ This is a front end project built with React, TypeScript, React Router, and Mant
 Open a terminal and type: `npm install`
 
 ## How to run project
-Open a terminal and type: `npm run dev
+Open a terminal and type: `npm run dev`
