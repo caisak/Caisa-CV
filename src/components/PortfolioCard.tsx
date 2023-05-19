@@ -2,6 +2,26 @@ import { AspectRatio, Button, Card, Center, Container, createStyles, Divider, Im
 
 const portfolioData = [
   {
+    title: 'Cat Chat',
+    image:
+      '../images/ccchat.png',
+    description: 'Cat Chat is sister app to Scratchpad - but for chatting. Choose a username and get started! Join an existing room or create a new room. Chat with your friends or make new ones.',
+    link: '/',
+    github: '/',
+    website: 'Coming Soon',
+    build: 'react, typescript, socket io, mantine ui',
+  },
+  {
+    title: 'Scratchpad',
+    image:
+      '../images/scratchpadp.png',
+    description: 'Scratchpad is a full stack social media application that is whimsical and colorful. Register an account, log in and start posting. Like Twitter - but for cats!',
+    link: '/',
+    github: '/',
+    website: 'Coming Soon',
+    build: 'react, typescript, mantine ui, express, mongoose',
+  },
+  {
     title: 'Boba Bliss',
     image:
       '../images/bobablissp.png',
@@ -31,26 +51,8 @@ const portfolioData = [
     website: 'Go to Moon Mission',
     build: 'typescript, p5',
   },
-  {
-    title: 'Scratchpad',
-    image:
-      '../images/scratchpadp.png',
-    description: 'Scratchpad is a full stack social media application that is whimsical and colorful. Register an account, log in and start posting. Like Twitter - but for cats!',
-    link: '/',
-    github: '/',
-    website: 'Coming Soon',
-    build: 'react, typescript, mantine ui, express, mongoose',
-  },
-  {
-    title: 'Cat Chat',
-    image:
-      '../images/ccchat.png',
-    description: 'Cat Chat is sister app to Scratchpad - but for chatting. Choose a username and get started! Join an existing room or create a new room. Chat with your friends or make new ones.',
-    link: '/',
-    github: '/',
-    website: 'Coming Soon',
-    build: 'react, typescript, socket io, mantine ui',
-  },
+
+
 ];
 
 const useStyles = createStyles((theme) => ({
@@ -106,8 +108,8 @@ export function ArticlesCardsGrid() {
       >
       View on GitHub 
     </Button>
-    <Button className={classes.button} color={buttonColor} 
-    variant="outline" 
+    <Button className={classes.button}
+    color="dark"
     radius="lg"
     size="md"
       component="a"

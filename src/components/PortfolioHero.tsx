@@ -14,7 +14,9 @@ const useStyles = createStyles((theme) => ({
     backgroundColor: "#11284b",
     backgroundSize: "cover",
     backgroundPosition: "center",
-    backgroundImage: "url(/images/coffeeplan.jpg)",
+    backgroundImage: theme.colorScheme === 'dark' 
+      ? 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/comp2.jpg)'
+      : 'linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(/images/comp4.jpg)',
     paddingTop: `calc(${theme.spacing.xl} * 3)`,
     paddingBottom: `calc(${theme.spacing.xl} * 3)`,
     marginTop: "1rem",
