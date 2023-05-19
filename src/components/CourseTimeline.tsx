@@ -45,7 +45,7 @@ export function CourseTimeline() {
   return (
     <Timeline active={4} bulletSize={24} lineWidth={4} color="teal">
       {courseData.map((course) => (
-        <Timeline.Item bullet={<course.Icon size={12} />} title={course.title}>
+        <Timeline.Item bullet={<course.Icon size={12} />} title={course.title} style={{maxWidth: "28rem"}}>
           <Text size="sm">{course.description}</Text>
           <Text size="xs" color="dimmed" mt={4}>
             {course.points}
