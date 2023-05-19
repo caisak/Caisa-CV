@@ -37,23 +37,14 @@ export function Info() {
           and precision - much like programming.
           <br></br>
           <br></br>
-          I’m currently working as a barista and this has not only allowed me to
-          make a mean cappuccino but has also taught me invaluable lessons about
-          teamwork, customer service, and the art of managing high-pressure
+          I’m currently working as a barista and this has not only allowed me to make specialty coffee drinks but has also taught me invaluable lessons about teamwork, customer service, and the art of managing high-pressure
           situations with grace and integrity.
           <br></br>
           <br></br>
-          In the long term, I envision myself transitioning into a Project
-          Management role. I am excited by the prospect of leading diverse
-          teams, managing resources, and delivering projects that exceed client
-          expectations.
+          In the long term, I envision myself transitioning into a Project Management role. I am excited by the prospect of leading diverse teams, managing resources, and delivering projects that exceed client expectations.
           <br></br>
           <br></br>
-          As you can see, I am a blend of creativity, technical prowess, and
-          social skills. I am a firm believer in balancing work and play, and I
-          strive to bring a sense of joy and enthusiasm to everything I do. I
-          look forward to bringing my unique blend of skills and passions to a
-          team where I can learn, grow, and contribute positively.
+          I strive to bring a sense of curiosity and enthusiasm to everything I do. I look forward to bringing my unique blend of skills and passions to a team where I can learn, grow, and contribute positively.
         </Text>
       </div>
     </Paper>
