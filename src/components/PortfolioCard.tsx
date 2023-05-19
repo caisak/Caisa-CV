@@ -73,8 +73,8 @@ const useStyles = createStyles((theme) => ({
 
   button: {
     margin: '0.5rem',
+    marginTop: '1rem',
   },
-
 
 }));
 
@@ -108,8 +108,8 @@ export function ArticlesCardsGrid() {
       >
       View on GitHub 
     </Button>
-    <Button className={classes.button}
-    color="dark"
+    <Button className={classes.button} color={buttonColor}
+    variant="outline"
     radius="lg"
     size="md"
       component="a"
