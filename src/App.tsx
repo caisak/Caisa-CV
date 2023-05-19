@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import { FooterCentered } from './components/Footer'
 import { HeaderResponsive } from './components/Header'
+import { ScrollToTop } from './main'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <div>
+      <ScrollToTop />
       <HeaderResponsive links={headerLinks} />
       <Box w="100%">
         <Outlet />
