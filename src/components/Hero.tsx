@@ -96,7 +96,7 @@ export function HeroImageRight() {
       <Container size="lg">
         <div className={classes.inner}>
           <div className={classes.content}>
-            <Flex>
+            <Flex align="center">
               <Title mr="lg" className={classes.title}>
                 Caisa Köhlin
               </Title>
