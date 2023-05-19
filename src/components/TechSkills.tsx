@@ -5,7 +5,8 @@ import { FaBootstrap, FaGit, FaReact } from 'react-icons/fa';
 import { ImHtmlFive } from 'react-icons/im';
 import { IoLogoCss3 } from 'react-icons/io';
 import { SiAdobepremierepro, SiChakraui, SiJavascript, SiMongodb, SiSocketdotio, SiStyledcomponents, SiSvelte, SiTypescript } from 'react-icons/si';
-import { TbBrandMantine } from 'react-icons/tb';
+import { TbBrandMantine, TbBrandCypress } from 'react-icons/tb';
+
 
 export function ProgressCard() {
   return (
@@ -52,8 +53,10 @@ export function TechKnowledge() {
     { Icon: TbBrandMantine, title: "Mantine" },
     { Icon: FaBootstrap, title: "Bootstrap" },
     { Icon: SiSocketdotio, title: "Socket.io" },
+    { Icon: TbBrandCypress, title: "Cypress"},
     { Icon: SiStyledcomponents, title: "Styled Components" },
     { Icon: SiAdobepremierepro, title: "Adobe Premiere Pro" },
+    
   ];
   return(
 <Card
