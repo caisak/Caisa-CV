@@ -11,7 +11,9 @@ import { NavLink } from "react-router-dom";
 
 const useStyles = createStyles((theme) => ({
   root: {
-    backgroundColor: "#11284b",
+    backgroundColor: theme.colorScheme === 'dark'
+    ? 'white'
+    : theme.colors.dark,
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundImage: theme.colorScheme === 'dark' 

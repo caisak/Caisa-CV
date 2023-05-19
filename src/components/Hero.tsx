@@ -12,7 +12,9 @@ import { AnimatedTitle } from "./AnimatedTitle";
 
 const useStyles = createStyles((theme) => ({
   root: {
-    backgroundColor: "#11284b",
+    backgroundColor: theme.colorScheme === 'dark'
+    ? 'white'
+    : theme.colors.dark,
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundImage: "url(/images/lakesup.jpg)",
