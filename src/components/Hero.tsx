@@ -2,13 +2,11 @@ import {
   Button,
   Center,
   Container,
-  createStyles,
-  Divider,
-  Flex,
-  rem,
-  Title
+  createStyles, rem, useMantineTheme
 } from "@mantine/core";
-import { AnimatedTitle } from "./AnimatedTitle";
+import { useMediaQuery } from "@mantine/hooks";
+import { DesktopTitle } from "./DesktopTitle";
+import { MobileTitle } from "./MobileTitle";
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -54,18 +52,12 @@ const useStyles = createStyles((theme) => ({
     },
   },
 
-  title: {
-    color: theme.white,
-    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-    fontWeight: 900,
-    lineHeight: 1.05,
-    maxWidth: rem(500),
-    fontSize: rem(48),
-
-    [theme.fn.smallerThan("md")]: {
-      maxWidth: "100%",
-      fontSize: rem(34),
-      lineHeight: 1.15,
+  flexContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    flexDirection: 'row',
+    [theme.fn.smallerThan("sm")]: {
+      flexDirection: 'column',
     },
   },
 
@@ -93,20 +85,14 @@ const useStyles = createStyles((theme) => ({
 
 export function HeroImageRight() {
   const { classes } = useStyles();
+  const theme = useMantineTheme();
+  const isMobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
   return (
     <div className={classes.root}>
       <Container size="lg">
         <div className={classes.inner}>
           <div className={classes.content}>
-            <Flex align="center">
-              <Title mr="lg" className={classes.title}>
-                Caisa Köhlin
-              </Title>
-              <Divider size="xl" orientation="vertical" color="white" />
-              <Title ml="lg" className={classes.title}>
-                <AnimatedTitle />
-              </Title>
-            </Flex>
+          {isMobile ? <MobileTitle /> : <DesktopTitle />}
             <Center>
               <a href="mailto:caisa.kohlin@medieinstitutet.se" style={{ textDecoration: "none" }}>
                 <Button

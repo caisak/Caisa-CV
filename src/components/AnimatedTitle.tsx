@@ -26,8 +26,9 @@ const useStyles = createStyles((theme) => ({
 
     [theme.fn.smallerThan("md")]: {
       maxWidth: "100%",
-      fontSize: rem(20), // Adjust as needed
+      fontSize: rem(22), // Adjust as needed
       lineHeight: 1.15,
+      color: 'white',
     },
   },
 }));
