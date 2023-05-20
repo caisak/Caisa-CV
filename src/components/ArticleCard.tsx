@@ -3,7 +3,7 @@ import { Button, createStyles, Paper, rem } from "@mantine/core";
 const useStyles = createStyles((theme) => ({
   card: {
     height: rem(200),
-    width: "30rem",
+    width: "22rem",
     display: "flex",
     filter: theme.colorScheme === 'dark' ? 'grayscale(30%)' : 'none',
     flexDirection: "column",
