@@ -4,7 +4,7 @@ import { CgFigma } from 'react-icons/cg';
 import { FaBootstrap, FaGit, FaReact } from 'react-icons/fa';
 import { ImHtmlFive } from 'react-icons/im';
 import { IoLogoCss3 } from 'react-icons/io';
-import { SiAdobepremierepro, SiChakraui, SiJavascript, SiMongodb, SiSocketdotio, SiStyledcomponents, SiSvelte, SiTypescript } from 'react-icons/si';
+import { SiAdobepremierepro, SiChakraui, SiJavascript, SiMongodb, SiSocketdotio, SiStyledcomponents, SiSvelte, SiTypescript, SiExpress } from 'react-icons/si';
 import { TbBrandMantine, TbBrandCypress } from 'react-icons/tb';
 
 
@@ -48,13 +48,14 @@ export function TechKnowledge() {
     { Icon: FaGit, title: "Git" },
     { Icon: SiSvelte, title: "Svelte" },
     { Icon: SiMongodb, title: "MongoDB" },
+    { Icon: SiExpress, title: "Express" },
     { Icon: CgFigma, title: "Figma" },
-    { Icon: SiChakraui, title: "Chakra UI" },
     { Icon: TbBrandMantine, title: "Mantine" },
-    { Icon: FaBootstrap, title: "Bootstrap" },
+    { Icon: SiChakraui, title: "Chakra UI" },
     { Icon: SiSocketdotio, title: "Socket.io" },
     { Icon: TbBrandCypress, title: "Cypress"},
     { Icon: SiStyledcomponents, title: "Styled Components" },
+    { Icon: FaBootstrap, title: "Bootstrap" },
     { Icon: SiAdobepremierepro, title: "Adobe Premiere Pro" },
     
   ];
