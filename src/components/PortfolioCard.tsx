@@ -100,7 +100,7 @@ export function ArticlesCardsGrid() {
       <Button className={classes.button} color={buttonColor}
       variant="outline" 
       radius="lg"  
-      size="md"
+      size="sm"
       component="a"
       href={article.github}
       target="_blank"
@@ -111,7 +111,7 @@ export function ArticlesCardsGrid() {
     <Button className={classes.button} color={buttonColor}
     variant="outline"
     radius="lg"
-    size="md"
+    size="sm"
       component="a"
       href={article.link}
       target="_blank"
