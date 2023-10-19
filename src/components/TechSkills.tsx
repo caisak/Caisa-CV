@@ -4,7 +4,7 @@ import { CgFigma } from 'react-icons/cg';
 import { FaBootstrap, FaGit, FaReact } from 'react-icons/fa';
 import { ImHtmlFive } from 'react-icons/im';
 import { IoLogoCss3 } from 'react-icons/io';
-import { SiAdobepremierepro, SiChakraui, SiJavascript, SiMongodb, SiSocketdotio, SiStyledcomponents, SiSvelte, SiTypescript, SiExpress } from 'react-icons/si';
+import { SiAdobepremierepro, SiAzuredevops, SiAdobeindesign, SiChakraui, SiJavascript, SiMongodb, SiSocketdotio, SiStyledcomponents, SiSvelte, SiTypescript, SiExpress } from 'react-icons/si';
 import { TbBrandMantine, TbBrandCypress } from 'react-icons/tb';
 
 
@@ -44,6 +44,8 @@ export function TechKnowledge() {
   const theme = useMantineTheme();
 
   const icons = [
+    { Icon: SiAzuredevops, title: "Azure DevOps" },
+    { Icon: FaReact, title: "React Native" },
     { Icon: AiFillGithub, title: "Github" },
     { Icon: FaGit, title: "Git" },
     { Icon: SiSvelte, title: "Svelte" },
@@ -57,6 +59,7 @@ export function TechKnowledge() {
     { Icon: SiStyledcomponents, title: "Styled Components" },
     { Icon: FaBootstrap, title: "Bootstrap" },
     { Icon: SiAdobepremierepro, title: "Adobe Premiere Pro" },
+    { Icon: SiAdobeindesign, title: "Adobe In Design" }
     
   ];
   return(

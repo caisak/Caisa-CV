@@ -2,7 +2,8 @@ import { Text, Timeline } from "@mantine/core";
 import { CgFigma } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { ImHtmlFive } from "react-icons/im";
-import { SiJavascript, SiTypescript } from "react-icons/si";
+import { BsRecycle, BsPersonWorkspace } from "react-icons/bs";
+import { SiJavascript, SiTypescript, SiAdobeindesign } from "react-icons/si";
 
 const courseData = [
   {
@@ -39,11 +40,29 @@ const courseData = [
     points: "45 Yh-points",
     Icon: FaReact,
   },
+  {
+    title: "Graphic Design for interfaces",
+    description: "Adobe InDesign and Photoshop were used to create a graphic profile, wireframes and mock ups.",
+    points: "15 Yh-points",
+    Icon: SiAdobeindesign,
+  },
+  {
+    title: "Agile Project Management",
+    description: "Theories and workshops in agile project management, scrum and kanban",
+    points: "15 Yh-points",
+    Icon: BsRecycle,
+  },
+  {
+    title: "Internship 1",
+    description: "I worked with React Native, JavaScript, Azure DevOps, Appcenter.",
+    points: "50 Yh-points",
+    Icon: BsPersonWorkspace,
+  },
 ];
 
 export function CourseTimeline() {
   return (
-    <Timeline active={4} bulletSize={24} lineWidth={4} color="teal">
+    <Timeline active={7} bulletSize={24} lineWidth={4} color="teal">
       {courseData.map((course) => (
         <Timeline.Item bullet={<course.Icon size={12} />} title={course.title} style={{maxWidth: "28rem"}}>
           <Text size="sm">{course.description}</Text>
