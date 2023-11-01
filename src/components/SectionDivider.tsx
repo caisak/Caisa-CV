@@ -18,6 +18,14 @@ const useStyles = createStyles((theme) => ({
               : theme.colors.gray[0],
         },
       },
+      customButton: {
+        backgroundColor: '#79bfb9',
+        borderColor: '#79bfb9',
+        '&:hover': {
+          backgroundColor: '#68afa0',  // Adjust for desired hover effect
+          borderColor: '#68afa0',
+        }
+      }
 }));
 
 interface SectionDividerProps {
@@ -40,7 +48,7 @@ export const SectionDivider = ({ buttonText, link, title }: SectionDividerProps)
     >
       <Title order={2}>{title}</Title>
       <NavLink to={link} className={classes.link}>
-        <Button variant="outline" color={buttonColor} radius="lg">
+        <Button variant="filled" className={classes.customButton} radius="md">
           {buttonText}
         </Button>
       </NavLink>

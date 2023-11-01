@@ -91,6 +91,12 @@ const useStyles = createStyles((theme) => ({
     [theme.fn.smallerThan("md")]: {
       width: "100%",
     },
+    backgroundColor: '#79bfb9',
+    borderColor: '#79bfb9',
+    '&:hover': {
+      backgroundColor: '#68afa0',  // Adjust for desired hover effect
+      borderColor: '#68afa0',
+    }
   },
 }));
 
@@ -112,9 +118,8 @@ export function PortfolioHero() {
             <Center>
               <NavLink to="https://github.com/caisak">
               <Button
-                variant="outline"
-                color="gray.1"
-                radius="lg"
+                variant="filled"
+                radius="md"
                 size="lg"
                 className={classes.control}
                 mt={40}

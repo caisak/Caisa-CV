@@ -80,6 +80,14 @@ const useStyles = createStyles((theme) => ({
       padding: theme.spacing.md,
     },
   },
+  customButton: {
+    backgroundColor: '#79bfb9',
+    borderColor: '#79bfb9',
+    '&:hover': {
+      backgroundColor: '#68afa0',  // Adjust for desired hover effect
+      borderColor: '#68afa0',
+    }
+  }
 }));
 
 interface HeaderResponsiveProps {
@@ -100,7 +108,7 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
       className={cx(classes.link)}
       onClick={close}
     >
-      <Button variant="outline" color={buttonColor} radius="lg">
+      <Button variant="filled" className={classes.customButton} radius="md">
         {link.label}
       </Button>
     </NavLink>

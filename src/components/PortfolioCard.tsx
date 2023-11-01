@@ -75,6 +75,16 @@ const useStyles = createStyles((theme) => ({
     margin: '0.5rem',
     marginTop: '1rem',
   },
+  customButton: {
+    backgroundColor: '#79bfb9',
+    borderColor: '#79bfb9',
+    margin: '0.5rem',
+    marginTop: '1rem',
+    '&:hover': {
+      backgroundColor: '#68afa0',  // Adjust for desired hover effect
+      borderColor: '#68afa0',
+    }
+  }
 
 }));
 
@@ -97,9 +107,9 @@ export function ArticlesCardsGrid() {
       <Divider my="sm" />
       <Text tt="uppercase" fw={700} fz="xs">{article.build}</Text>
       <Center>
-      <Button className={classes.button} color={buttonColor}
-      variant="outline" 
-      radius="lg"  
+      <Button className={classes.button} color={"gray"}
+      variant="filled" 
+      radius="md"  
       size="sm"
       component="a"
       href={article.github}
@@ -108,9 +118,9 @@ export function ArticlesCardsGrid() {
       >
       View on GitHub 
     </Button>
-    <Button className={classes.button} color={buttonColor}
-    variant="outline"
-    radius="lg"
+    <Button className={classes.customButton}
+    variant="filled"
+    radius="md"
     size="sm"
       component="a"
       href={article.link}
